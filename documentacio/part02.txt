@@ -1,0 +1,2 @@
+Part 2
+Crear pàgina d'inici, pàgina de contacte i carpeta de recursos segons disseny porposat

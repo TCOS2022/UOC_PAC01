@@ -12,3 +12,9 @@ L' arxiu del fons del titol principal de la pagina:
 
 L' arxiu del perfil personal
     "CV_perfilPersonal"
+
+Notes:
+    Com posar els links interiors
+    Com fer les taules
+    Com organitzar el layout de manera semantica
+

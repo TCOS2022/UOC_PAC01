@@ -1,0 +1,42 @@
+Crear barra de menú transversal, un document CSS i donar estils a la pàgina de Currículum Vitae i
+contacte
+
+afegirem tambe un normalize.css que serveix per unificar una mica els criteris disparts dels agents web
+i aixi s intentara mantenir una mateixa apareincia en diferents navegadors
+
+primer de tot afegim arxiu de css general ....
+
+el primer layout ho intentarem fer SOLS amb floats ... obviarem crear el layout amb table  ... 
+
+afegirem doncs estils_amb_floats.css com arxiu general de css
+
+Notes sobr els floats.
+tot i que ara ja tenim opcions molt mes comodes i facils, sobretot per fer disenys responsive, els floats 
+encara son de allo mes utils. recordem algunes de les seves propitats
+
+position: relative | absolute
+float: none | left | right
+clear: both | left | right
+width -> normalment en %
+display: block | inline | inline-block
+overflow: hidden | ....
+
+
+amb position absolute, tambe podem fer servir top / bottom / left / right per posicionar
+
+
+Una manera de substituir els floats es fer servir display:inline
+
+PRIORITATS AL CSS (de mes a menys)
+Localitzacio
+    * integrat al element
+    * integrat al full html
+    * full extern
+
+Dintre del arxiu CSS
+    * ID
+    * class
+    * tag
+    * mes prioritari si esta situat mes avall
+    * podem abviar la prioritat afegint !important
+    * mes prioritari si es MES especific

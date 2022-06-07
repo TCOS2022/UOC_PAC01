@@ -1,0 +1,32 @@
+000.000.000
+A partir de una carpeta buida, fem carpeta de nom "documentacio" i un arxiu .gitignore
+
+000.000.001
+Inicialitzem repositori local
+	git init
+
+Configurem repositori local
+	git add user.name  nom_usuari_repositori
+	git add user.email email_usuari_repositori
+
+Configurem repositori remot
+	git remote add REMOT01 https://github.com/ ....
+
+000.000.002
+Afegirem la estructura basica del projecte
+carpetes css/js/media i info (conte els recursos del curs)
+arxius: index/cv/contacte.html
+
+000.000.003
+Crearem branca DEV
+
+
+PART 01 (Sols HTML)
+Crear i preparar arxiu cv.html segons disseny
+
+PART 02 (Sols HTML)
+Crear i preparar arxiu inici/index.html i contacte.html segons disseny
+Crear i preparar carpetes de recursos
+
+PART 03 (HTML i CSS)
+Crear barra menu, estils.css i afegir estils a cv i contacte.

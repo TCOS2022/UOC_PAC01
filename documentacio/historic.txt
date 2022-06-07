@@ -6,11 +6,11 @@ Inicialitzem repositori local
 	git init
 
 Configurem repositori local
-	git add user.name  nom_usuari_repositori
-	git add user.email email_usuari_repositori
+	git add user.name  TCOS
+	git add user.email jsanpons@uoc.edu
 
 Configurem repositori remot
-	git remote add REMOT01 https://github.com/ ....
+	https://github.com/TCOS2022/UOC_PAC01.git
 
 000.000.002
 Afegirem la estructura basica del projecte
@@ -18,7 +18,17 @@ carpetes css/js/media i info (conte els recursos del curs)
 arxius: index/cv/contacte.html
 
 000.000.003
-Crearem branca DEV
+Crearem branca DEV per treballar-hi
+
+000.000.004
+Inici projecte proposat --> first commit !!!!kdir css
+
+	git add .
+	git commit -m "initialize project and folder structure"git add .
+
+	git pull UOC_PAC01 main
+
+	git branch dev
 
 
 PART 01 (Sols HTML)

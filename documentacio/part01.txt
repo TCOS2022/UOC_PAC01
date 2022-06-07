@@ -1,0 +1,1 @@
+Crear pagina de cv.html segons imatge del projecte. sense css.

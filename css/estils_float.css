@@ -1,0 +1,86 @@
+/*
+***********************************************
+*** ARXIU CSS PER FER EL LAYOUT EAMB FLOATS ***
+***********************************************
+*/
+
+/* 
+***** RESET BASIC CSS *****
+* {margin:0px; padding:0px}
+*/
+
+
+/*
+************** CSS GENERICS A TOTA LA WEB *******************
+*/
+
+/* CONTENIDOR GENERAL */
+.mainContainer{
+    width:90%;
+    margin:0 auto;
+    background-color: white;
+}
+
+/* NAV */
+.mainContainer>nav {
+    /* background-color: black; */
+}
+.mainContainer>nav ul{
+    /* eliminem els "punts" devant dels elements */
+    list-style: none;
+}
+.mainContainer>nav li{
+    /* posem els elements en linia */
+    display: inline;
+}
+.mainContainer>nav img{
+    background-color:white;
+}
+.mainContainer>nav a{
+    /* color:white; */
+}
+.mainContainer>nav a:hover{
+    color:black;
+    background-color: green;
+    border-radius: 5px;
+}
+
+/* HEADER */
+/* Aqui cal qeu posem el titol a sobre de la imatge, farem servir posicions absolutes i un hack de % */
+.mainContainer>header{
+    position:relative
+}
+.mainContainer>header h1{
+    /* Reset per poder centrar correctament */
+    margin:0px; padding:10px 20px;
+    color:white;
+    background-color: green;
+    border-radius: 20px 0px 20px 0px;
+
+    /* per centrar-lo a sobre de la imatge, centrem primer el contenidor del h2 desde el vertex
+    superior esquerre i despres centrem el contenidor del h2 cap aquell punt */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.mainContainer>header img{
+    /* width: 100%; */
+}
+
+/* FOOTER */
+
+
+/*
+****************************************
+*** ESTILS ESPECIFICS DE CADA PAGINA ***
+****************************************
+*/
+
+/* INDEX */
+
+/* CV */
+
+/* CONTACTE */
+/* al diseny podem veure com el contenidor principal es del 100% */
+#CONTACTE_mainContainer{width: 100%;}

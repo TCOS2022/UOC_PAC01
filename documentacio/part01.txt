@@ -1,1 +1,14 @@
 Crear pagina de cv.html segons imatge del projecte. sense css.
+
+Afegirem tambe la carpeta de imatges amb les carpetes de: continguts, backgrounds i icones
+Els arxius de les icones de:
+    "Home"
+    "Twitter"
+    "LinkIN"
+    "Instagram
+
+L' arxiu del fons del titol principal de la pagina:
+    "CV_fonsTitolPrincipal"
+
+L' arxiu del perfil personal
+    "CV_perfilPersonal"

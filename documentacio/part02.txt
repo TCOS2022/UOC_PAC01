@@ -10,3 +10,6 @@ formularis:
     definir longitud dels inputs
     Checkboxes
     button
+    sice vs width als inputs
+
+PAGINA DE INICI

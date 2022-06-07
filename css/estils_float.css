@@ -13,6 +13,7 @@
 /*
 ************** CSS GENERICS A TOTA LA WEB *******************
 */
+h2{width: 100%; text-align: center;}
 
 /* CONTENIDOR GENERAL */
 .mainContainer{
@@ -93,7 +94,16 @@
 }
 
 /* FOOTER */
+.mainContainer>footer{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
 
+.mainContainer>footer img{
+    margin:0 10px;
+    background-color: white;
+}
 
 /*
 ****************************************
@@ -108,3 +118,15 @@
 /* CONTACTE */
 /* al diseny podem veure com el contenidor principal es del 100% */
 #CONTACTE_mainContainer{width: 100%;}
+
+#CONTACTE_mainContainer main{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 100px
+}
+
+#CONTACTE_mainContainer main form div{
+    text-align: center;
+}
+
+

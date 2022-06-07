@@ -1,2 +1,12 @@
 Part 2
 Crear pàgina d'inici, pàgina de contacte i carpeta de recursos segons disseny porposat
+
+PAGINA DE CONTACTE
+Copiarem la part de dalt de la pagina CV ....
+I la aprt del footer tambe .....
+
+formularis:
+    fieldset
+    definir longitud dels inputs
+    Checkboxes
+    button

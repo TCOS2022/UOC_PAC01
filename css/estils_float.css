@@ -18,26 +18,50 @@
 .mainContainer{
     width:90%;
     margin:0 auto;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 /* NAV */
 .mainContainer>nav {
-    /* background-color: black; */
+    position:relative;
+    overflow: hidden;
+    background-color: black;
+}
+.mainContainer>nav::after{
+    content:"";
+    clear: both;
 }
 .mainContainer>nav ul{
     /* eliminem els "punts" devant dels elements */
     list-style: none;
+    overflow: hidden;
+    padding:0px;
+    margin:0px
 }
 .mainContainer>nav li{
     /* posem els elements en linia */
-    display: inline;
+    display: inline-block;  
 }
-.mainContainer>nav img{
+.mainContainer>nav li:first-child{
+    float:left;
+    color:black;
+    width: 100px;  
+    margin:0px;
+    padding:0px;
+    background-color: gray;
+    text-align: center;
+}
+.mainContainer>nav li:not(first-child){
+    float:right;
+    padding: 0 10px;
+}
+.mainContainer>nav a img{
     background-color:white;
+    margin:0px;
+    padding:0px;
 }
 .mainContainer>nav a{
-    /* color:white; */
+    color:white
 }
 .mainContainer>nav a:hover{
     color:black;
@@ -65,7 +89,7 @@
     transform:translate(-50%,-50%);
 }
 .mainContainer>header img{
-    /* width: 100%; */
+    width: 100%;
 }
 
 /* FOOTER */

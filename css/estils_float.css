@@ -6,20 +6,33 @@
 
 /* 
 ***** RESET BASIC CSS *****
-* {margin:0px; padding:0px}
 */
+* {
+    margin:0px; 
+    padding:0px;
+    box-sizing: border-box;
+}
+
 
 
 /*
 ************** CSS GENERICS A TOTA LA WEB *******************
 */
-h2{width: 100%; text-align: center;}
+h2{
+    width: 100%; 
+    text-align: center;
+    padding: 15px;
+}
+
+section{padding-bottom: 20px;}
+
+body{background-color: darkgrey;}
 
 /* CONTENIDOR GENERAL */
 .mainContainer{
-    width:90%;
+    width:75%;
     margin:0 auto;
-    /*background-color: white;*/
+    background-color: white;
 }
 
 /* NAV */
@@ -105,17 +118,85 @@ h2{width: 100%; text-align: center;}
     background-color: white;
 }
 
+/* MAIN */
+/* 
+Tant la pagina de inici com la de cv estan estructurades igual, en sections
+/* la pagina de contacte es lleugerament diferent i te estils propis sobreposats
+ al final del arxiu 
+ */
+
+ .mainContainer>main>section{width: 100%;}
+
+ .mainContainer>main>section:nth-child(2n+2){background-color: lightgray;}
+
 /*
 ****************************************
 *** ESTILS ESPECIFICS DE CADA PAGINA ***
 ****************************************
 */
 
-/* INDEX */
+/**** INDEX ****/
 
-/* CV */
+/**** CV ****/
+/* SECTION: INDEX */
+#index{}
+#index nav{}
+#index nav ul{list-style: none; text-align: center;}
+#index nav ul li{display: inline;margin: 0 10px;}
+#index{} nav ul li a{}
+#index{} nav ul li img{}
 
-/* CONTACTE */
+/* SECTION: PERSONAL */
+#personal{
+    overflow:hidden; 
+    position:relative;
+    width: 100%;
+    padding-bottom: 20px;
+}
+#personal>div:first-of-type{
+    float:left;
+    width: 60%;
+    padding-left:100px
+}
+#personal>div:not(first-of-type){
+    float:right;
+    width: 40%;
+    text-align: left;
+}
+#personal::after{
+    content:"";
+    clear: both;
+}
+
+/* SECTION: IDIOMES */
+#idiomes {}
+#idiomes table{
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+#idiomes table caption{
+    font-size: 10px;
+    font-weight: 800;
+    color: blue;
+    margin-bottom: 10px;
+}
+#idiomes table th,td{
+    border:solid green 2px;
+    text-align: center;
+    padding:10px 
+}
+
+#estudis ul,#laboral ul{
+    width: 75%;
+    margin: 0 auto;
+}
+
+section ul li .list_titol{font-weight: bold; font-size: 110%rem;}
+section ul li .list_lloc{font-style: italic;}
+section ul li .list_any{}
+section ul li .list_descripcio{}
+
+/**** CONTACTE ****/
 /* al diseny podem veure com el contenidor principal es del 100% */
 #CONTACTE_mainContainer{width: 100%;}
 

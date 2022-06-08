@@ -55,3 +55,9 @@ Exemple estils CSS pels <ul>
 
 Exemple estils CSS pels <li>
 
+
+Com ja em fet la de cv i la de contacte amb floats, ara ho intentarem amb flex i grid
+flex es molt util per centrar elements en una sola linia o columna
+grid en tot allo que sigui en 2d
+
+afegim doncs, un nou arxiu de estils ....

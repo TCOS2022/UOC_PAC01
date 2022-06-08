@@ -11,9 +11,9 @@
 
     <!-- Enllaços als CSS, fonts i llibreries varies -->
     <!-- normalize.css per regularitzar estils generals -->
-        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/normalize.css">
     <!-- estils.css per totes les pagines -->
-        <!-- <link rel="stylesheet" href="css/general.css".css"> -->
+        <link rel="stylesheet" href="css/estils_float.css".css">
     <!-- cv.css per si cal algun estil especific de la pagina -->
         <!-- <link rel="stylesheet" href="css/cv.css"> -->
 </head>
@@ -44,7 +44,7 @@
         </header>
    
         <main>
-            <section class="index">
+            <section id="index">
                 <h2>Index</h2>
                 <nav>
                     <ul>
@@ -89,7 +89,7 @@
             <section id="idiomes">
                 <h2>Idiomes </h2>
                 <table>
-                    <caption></caption>
+                    <caption>aixo es el caption de la taula</caption>
                     <thead>
                         <tr>
                             <th>Idioma</th>
@@ -123,14 +123,26 @@
                         </tr>
                         <tr>
                             <td>Frances</td>
+                            <td></td>
+                            <td>*</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Klingon</td>
                             <td>*</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                     </tbody>
-                    <tfoot></tfoot>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">aixo es el foot de la taula</td>
+                        </tr> 
+                    </tfoot>
                 </table>
+                <br>
             </section>
 
             <section id="estudis">

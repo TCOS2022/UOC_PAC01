@@ -114,9 +114,7 @@ main{
    /* border: 2px solid red */
 }
 
-main h2{text-align: center;}
-
-
+main h2{text-align: center; width: 100%;}
 
 
 /* FOOTER */
@@ -146,6 +144,33 @@ main h2{text-align: center;}
    ************************************************** */
 
 /* INICI */
+/* agruparem els dos elements en un div per poder fer servir flex, ja que el h2 esta al amteix nivell */
+section#presentacio>div{
+   display:flex;
+   position: relative;
+}
+
+section p{padding: 0.5rem; margin:0.5rem}
+
+section#projectes>div{
+   display:flex;
+   justify-content: space-evenly;
+}
+
+section#projectes article {
+   margin:1rem
+}
+
+section#projectes article button{display:block; margin: 0 auto;}
+
+section#experiencia{background-color: black;}
+
+section#experiencia h2 {color:white}
+section#experiencia>div{
+   padding:1rem;
+   display:flex;
+   justify-content: space-evenly;
+}
 
 /* CV */
 

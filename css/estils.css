@@ -54,6 +54,7 @@ ho farem amb selectors amb cascada */
    flex-direction: row; /* Direccio en qeu aniran els items ... */
    flex-wrap: nowrap; /* tots els item en 1 sola fila */
    justify-content: space-between; /* repartim el espai del conteniodr ENTRE els items */
+   align-items: center;
 }
 
 .mainContainer>nav ul.list_inner{
@@ -69,7 +70,8 @@ ho farem amb selectors amb cascada */
 }
 
 /* Aprofitant un peudoselector canviem el margin del FIRST i LAST CHILD */
-.mainContainer>nav ul li:first-child a img{ border:2px red solid}
+.mainContainer>nav ul li:first-child a img{ background-color: aqua; height:2rem}
+
 .mainContainer>nav ul li:last-child{ margin-right: 0px;}
 
 

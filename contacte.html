@@ -52,21 +52,32 @@
             <form action="">
                 <!--
                     Tot i qeu no es la millor opcio, posarem un size als inputs, pero dependra
-                    del navegador i de la font que syrti be, es millor posar un width al CSS
-                -->
-                <label for="">Nom</label><br>
-                <input type="text" name=""" id="" size="50"><br>
-                <br>
-                <label for="">Correu electronic</label><br>
-                <input type="email" name="" id=""size="50"><br>
-                <br>
-                <label for="">Comentaris</label><br>
-                <textarea name="" id="" cols="52" rows="10"></textarea><br>
+                    del navegador i de la font que surti be, es millor posar un width al CSS
 
-                <label for=""></label><br>
-                <input type="checkbox" name="" id="">He llegit i accepto la  <a href="#">politica de privacitat</a><br>
-                <br>
-                <div>
+                    UPDATE: treiem les referencias a columne pq li donarem un wifth desde css
+                        <input type="text" name=""" id="" size="50"><br>
+                        <input type="email" name="" id=""size="50"><br>
+                        <textarea name="" id="" cols="52" rows="10"></textarea><br>
+                -->
+                <fieldset>
+                    <label for="">Nom</label><br>
+                    <input type="text" name=""" id="" class="input1"><br><br>
+    
+                    <label for="">Correu electronic</label><br>
+                    <input type="email" name="" id="" class="input1"><br><br>
+    
+                    <label for="">Comentaris</label><br>
+                    <textarea name="" id="" rows="10" class="input1"></textarea><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="">Proteccio de dades:</label><br><br>
+                    <input type="checkbox" name="" id="" class="checkbox1">
+                    He llegit i accepto la <a href="#">politica de privacitat</a>
+                    <br><br>
+                </fieldset>
+                
+                <div class="button1">
                     <button type="reset">Netejar</button>
                     <button type="submit">Enviar</button>
                 </div>

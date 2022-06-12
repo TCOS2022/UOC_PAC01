@@ -25,7 +25,6 @@ html {font-size: 16px;}
 
 ul {list-style-type: none;}
 
-li a{color:white}
 
 /* ***** VARIABLES DE CSS ***** */
 
@@ -68,7 +67,7 @@ ho farem amb selectors amb cascada */
 .mainContainer>nav ul.list_inner li {
    margin: 0 0.5rem; /* fem servir rems pq son mes fluids */
 }
-
+.mainContainer>nav ul.list_inner li a {color:orange}
 /* Aprofitant un peudoselector canviem el margin del FIRST i LAST CHILD */
 .mainContainer>nav ul li:first-child a img{ background-color: aqua; height:2rem}
 
@@ -84,17 +83,77 @@ ho farem amb selectors amb cascada */
    top:50%;
    left:50%;
    transform:translate(-50%,-50%); 
+   /* ajustem el font-type, size i weight */
+   font-size: 3rem;
+   font-weight: bold;
 }
 
 .mainContainer>header>img{
    width: 100%;
-   /*z-index: 1; */
 }
 
 
 /* MAIN */
+/* com a "main" sols en podem tenir 1, llaovrs el podem fer servir de ancla/ selector principal */
+main{
+   position:relative;
+   width: 100%;
+   padding: 1rem 1rem;
+   border: 2px solid red
+}
+
+main h2{text-align: center;}
+
+main form{
+   width: 50%;
+   margin: 0 auto;
+   border: 2px dotted green;
+}
+main form fieldset{
+   border: 4px dotted orange
+}
+
+main form .input1{
+   width: 100%;
+   border: 2px solid blue;
+   text-align: left;
+}
+
+main form .button1{ 
+   display:flex;
+   justify-content: center;
+}
+
+main form button {
+   display:inline-block;
+   padding: 10px;
+   border: 2px black solid;
+   border-radius: 5px;
+   margin: 0 2rem;
+
+}
+
 
 /* FOOTER */
+/* com poden haver mes footers, el seleccionem especificament */
+/* ho posem "mono" amb flex ..... */
+.mainContainer>footer {
+   background-color: black;
+   padding: 0.5rem;
+}
+
+.mainContainer>footer div{
+   display:flex;
+   justify-content: center;
+}
+
+.mainContainer>footer div img{
+   width: 2rem;
+   background-color:white;
+   margin-left:1rem;
+   margin-right: 1rem;;
+
+}
 
 
 

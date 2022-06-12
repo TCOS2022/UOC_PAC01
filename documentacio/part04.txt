@@ -1,0 +1,11 @@
+Part 4
+Maquetació de la pàgina principal
+
+Introducció
+
+En aquesta part es començarà a treballar amb Figma. Figma és una eina de disseny i prototipat, que permet als programadors consultar en detall totes 
+les parts del disseny i inclús veure'n algunes de les propietats de CSS. D'aquesta manera es poden ajustar mides, espaiats, tipografies, colors… amb l
+'objectiu d'aconseguir una maquetació plenament fidel al disseny proposat.
+
+Més endavant es treballarà en Figma per tal de crear un wireframe o esbós inicial d'un disseny. En aquest punt només s'utilitzarà per consultar el 
+disseny proposat i mirar d'ajustar la maquetació per tal d'obtenir un resultat final el més similar possible al disseny proposat.

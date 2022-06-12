@@ -94,6 +94,10 @@ ho farem amb selectors amb cascada */
    /* ajustem el font-type, size i weight */
    font-size: 3rem;
    font-weight: bold;
+   padding: 1rem 2rem;
+   color:white;
+   background-color: green;
+   border-radius: 0 2rem 0 2rem;
 }
 
 .mainContainer>header>img{
@@ -121,6 +125,8 @@ main form fieldset{
    /* border: 4px dotted orange */
    border: none
 }
+
+ main form label{font-weight: bolder;}
 
 main form .input1{
    width: 100%;

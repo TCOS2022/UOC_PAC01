@@ -107,7 +107,7 @@ main{
    position:relative;
    width: 100%;
    padding: 1rem 1rem;
-   border: 2px solid red
+   /* border: 2px solid red */
 }
 
 main h2{text-align: center;}
@@ -115,15 +115,16 @@ main h2{text-align: center;}
 main form{
    width: 75%;
    margin: 0 auto;
-   border: 2px dotted green;
+   /* border: 2px dotted green; */
 }
 main form fieldset{
-   border: 4px dotted orange
+   /* border: 4px dotted orange */
+   border: none
 }
 
 main form .input1{
    width: 100%;
-   border: 2px solid blue;
+   /* border: 2px solid blue; */
    text-align: left;
 }
 

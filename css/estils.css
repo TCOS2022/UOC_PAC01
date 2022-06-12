@@ -76,6 +76,20 @@ ho farem amb selectors amb cascada */
 
 
 /* HEADER */
+/* val, farem servir posicions absolutes i relatives per sobreposar el h1 */
+.mainContainer>header{position:relative}
+.mainContainer>header h1{
+   margin:0px; padding:0px;
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%); 
+}
+
+.mainContainer>header>img{
+   width: 100%;
+   /*z-index: 1; */
+}
 
 
 /* MAIN */

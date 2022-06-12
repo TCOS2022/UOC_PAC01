@@ -116,37 +116,7 @@ main{
 
 main h2{text-align: center;}
 
-main form{
-   width: 75%;
-   margin: 0 auto;
-   /* border: 2px dotted green; */
-}
-main form fieldset{
-   /* border: 4px dotted orange */
-   border: none
-}
 
- main form label{font-weight: bolder;}
-
-main form .input1{
-   width: 100%;
-   /* border: 2px solid blue; */
-   text-align: left;
-}
-
-main form .button1{ 
-   display:flex;
-   justify-content: center;
-}
-
-main form button {
-   display:inline-block;
-   padding: 10px;
-   border: 2px black solid;
-   border-radius: 5px;
-   margin: 0 2rem;
-
-}
 
 
 /* FOOTER */
@@ -180,3 +150,33 @@ main form button {
 /* CV */
 
 /* CONTACTE */
+main form{
+   width: 75%;
+   margin: 0 auto;
+   /* border: 2px dotted green; */
+}
+main form fieldset{
+   /* border: 4px dotted orange */
+   border: none
+}
+
+main form label{font-weight: bolder;}
+
+main form .input1{
+   width: 100%;
+   /* border: 2px solid blue; */
+   text-align: left;
+}
+
+main form .button1{ 
+   display:flex;
+   justify-content: center;
+}
+
+main form button {
+   display:inline-block;
+   padding: 10px;
+   border: 2px black solid;
+   border-radius: 5px;
+   margin: 0 2rem;
+}

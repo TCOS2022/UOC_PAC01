@@ -10,7 +10,7 @@
     <!-- normalize.css per regularitzar estils generals -->
         <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <!-- estils.css per totes les pagines -->
-        <!-- <link rel="stylesheet" href="css/general.css".css"> -->
+        <link rel="stylesheet" href="css/estils.css".css">
     <!-- cv.css per si cal algun estil especific de la pagina -->
         <!-- <link rel="stylesheet" href="css/cv.css"> -->
 </head>
@@ -18,11 +18,17 @@
     <div class="mainContainer"> <!-- contenidor principal de la web -->
         <!-- BARRA DE NAVEGACIO -->
         <nav>
-            <ul>
-                <li><a href="#"><img src="media/icones/home.png" alt="home" height="16px"></a></li>
-                <li><a href="index.html">Inici</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
+            <ul class="list_outer">
+                <!-- dividem la llista en dos li, per poder posicionar-ho correctament amb flex -->
+                <li><a href="#"><img src="media/icones/home.svg" alt="home" height="16px"></a></li>
+                <li>
+                    <ul class="list_inner">
+                        <li><a href="index.html">Inici</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="contacte.html">Contacte</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
 
@@ -116,9 +122,9 @@
         <footer>
             <div>
                 <!-- afegim un width per controlar el desmadre del tamany .....-->
-                <a href="#"><img src="media/icones/5282551_tweet_twitter_twitter logo_icon.svg" alt="logo Twitter" width="50px"></a>
-                <a href="#"><img src="media/icones/5282542_linkedin_network_social network_linkedin logo_icon.svg" alt="logo LinkIn" width="50px"></a>
-                <a href="#"><img src="media/icones/5282544_camera_instagram_social media_social network_instagram logo_icon.svg" alt="logo instagram" width="50px"></a>
+                <a href="#"><img src="media/icones/logo_twitter.svg" alt="logo Twitter" width="50px"></a>
+                <a href="#"><img src="media/icones/logo_linkedin.svg" alt="logo LinkIn" width="50px"></a>
+                <a href="#"><img src="media/icones/logo_instagram.svg" alt="logo instagram" width="50px"></a>
             </div>
         </footer>
 

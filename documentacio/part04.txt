@@ -13,7 +13,7 @@ disseny proposat i mirar d'ajustar la maquetació per tal d'obtenir un resultat 
 
 PRE PART04 - NOTES
 
-Com ara ja treballem amb branques al git (i el seu caos) ... recordarem qeu per pujar TOTES les branques de cop añ remot podem fer servir:
+Com ara ja treballem amb branques al git (i el seu caos associat) ... recordarem que per pujar TOTES les branques de cop añ remot podem fer servir:
     git push --all  UOC_PAC01
 
-Dissenyarem la index.html JA amb flex i Grid, i anirem paassant el disseny de cv i contacte TAMBE a flex/grid, modificant tambe de pas allo que calgui al css
+Dissenyarem la index.html JA amb flex i Grid, i anirem pa ssant el disseny de cv i contacte TAMBE a flex/grid, modificant tambe de pas allo que calgui al css

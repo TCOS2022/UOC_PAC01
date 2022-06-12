@@ -1,0 +1,93 @@
+/*
+************************************************
+*** ARXIU CSS PER FER EL LAYOUT SENSE FLOATS ***
+************************************************
+*/
+
+
+
+/* ************************************ 
+   **** CSS GENERICS A TOTA LA WEB ****
+   ************************************ */
+
+/* ***** FIXING FONTS ***** */
+/* Definim font base per gestionar-ho tot amb em/rem */
+/* Per defecte es de 16px, pero ho podriem canviar ... */
+html {font-size: 16px;}
+
+/* ***** RESET BASIC CSS ***** */
+/* Eliminem margins i paddings i definim el model de caixa a "border-box" */
+* {
+    margin:0px; 
+    padding:0px;
+    box-sizing: border-box;
+}
+
+ul {list-style-type: none;}
+
+li a{color:white}
+
+/* ***** VARIABLES DE CSS ***** */
+
+/* ***** AREES COMUNS DEL DISSENY ***** */
+
+/* BODY */
+body {background-color: yellow;}
+/* mainContainer */
+
+.mainContainer {
+   width: 80%;
+   margin:0 auto;
+   background-color: white;
+}
+
+/* NAV */
+/* com que podem tenir molts ul anidats en diferent llocs, es important que definim a quin volem atacar,
+ho podem fer asignant-lis un id o una clase especifica, o be amb selectors en cascada. En aquest cas
+ho farem amb selectors amb cascada */
+
+.mainContainer>nav {background-color: black;}
+
+.mainContainer>nav ul.list_outer {
+   list-style-type: none;
+   display: flex;
+   flex-direction: row; /* Direccio en qeu aniran els items ... */
+   flex-wrap: nowrap; /* tots els item en 1 sola fila */
+   justify-content: space-between; /* repartim el espai del conteniodr ENTRE els items */
+}
+
+.mainContainer>nav ul.list_inner{
+   list-style-type: none;
+   display: flex;
+   flex-direction: row; /* Direccio en qeu aniran els items ... */
+   flex-wrap: nowrap; /* tots els item en 1 sola fila */
+   justify-content: flex-end; /* repartim el espai del conteniodr ENTRE els items */
+}
+
+.mainContainer>nav ul.list_inner li {
+   margin: 0 0.5rem; /* fem servir rems pq son mes fluids */
+}
+
+/* Aprofitant un peudoselector canviem el margin del FIRST i LAST CHILD */
+.mainContainer>nav ul li:first-child a img{ border:2px red solid}
+.mainContainer>nav ul li:last-child{ margin-right: 0px;}
+
+
+/* HEADER */
+
+
+/* MAIN */
+
+/* FOOTER */
+
+
+
+/* **************************************************
+   **** ESPECIFICACIONS PER PAGINES DETERMINADES ****
+   ************************************************** */
+
+/* INICI */
+
+/* CV */
+
+/* CONTACTE */

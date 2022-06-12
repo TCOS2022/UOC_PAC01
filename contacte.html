@@ -10,7 +10,7 @@
     <!-- normalize.css per regularitzar estils generals -->
         <link rel="stylesheet" href="css/normalize.css">
     <!-- estils.css per totes les pagines -->
-        <link rel="stylesheet" href="css/estils_float.css".css">
+        <link rel="stylesheet" href="css/estils.css">
     <!-- cv.css per si cal algun estil especific de la pagina -->
         <!-- <link rel="stylesheet" href="css/cv.css"> -->
 </head>
@@ -19,11 +19,17 @@
     <div class="mainContainer" id="CONTACTE_mainContainer"> <!-- contenidor principal de la web -->
         <!-- BARRA DE NAVEGACIO -->
         <nav>
-            <ul>
-                <li><a href="#"><img src="media/icones/home.png" alt="home" height="16px"></a></li>
-                <li><a href="index.html">Inici</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
+            <ul class="list_outer">
+                <!-- dividem la llista en dos li, per poder posicionar-ho correctament amb flex -->
+                <li><a href="#"><img src="media/icones/home.png" alt="home" height="16px">*****</a></li>
+                <li>
+                    <ul class="list_inner">
+                        <li><a href="index.html">Inici</a></li>
+                        <li><a href="cv.html">CV</a></li>
+                        <li><a href="contacte.html">Contacte</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
 

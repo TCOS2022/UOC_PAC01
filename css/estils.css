@@ -56,6 +56,16 @@ ho farem amb selectors amb cascada */
    align-items: center;
 }
 
+.mainContainer>nav>ul.list_outer>li:first-child {
+   width: 100px;
+   background-color: lightslategray;
+   text-align: center;
+}
+.mainContainer>nav ul.list_outer>li>a>img{
+   color:white; 
+   height:2rem; 
+}
+
 .mainContainer>nav ul.list_inner{
    list-style-type: none;
    display: flex;
@@ -67,11 +77,9 @@ ho farem amb selectors amb cascada */
 .mainContainer>nav ul.list_inner li {
    margin: 0 0.5rem; /* fem servir rems pq son mes fluids */
 }
-.mainContainer>nav ul.list_inner li a {color:orange}
-/* Aprofitant un peudoselector canviem el margin del FIRST i LAST CHILD */
-.mainContainer>nav ul li:first-child a img{ background-color: aqua; height:2rem}
-
-.mainContainer>nav ul li:last-child{ margin-right: 0px;}
+.mainContainer>nav ul.list_inner li a {color:white}
+/* Aprofitant un peudoselector canviem el margin del LAST CHILD */
+.mainContainer>nav ul li:last-child{ margin-right: 1rem;}
 
 
 /* HEADER */

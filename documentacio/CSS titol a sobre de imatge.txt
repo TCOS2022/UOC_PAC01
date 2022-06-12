@@ -1,0 +1,34 @@
+farem 2 caixes
+
+al fer servis position aboslute, posicionem el vertex esquerra superior
+en referenci al contenidor
+
+ara movem la posicio del tontenidor del text pq el seu centre coincideixi
+amb el punt de centrat anterior
+
+HTML:
+    <div id="contenidor">
+        <h2 id="titol"> TITOL A CENTRAR </h2>
+        <img id="fons" src="media/imatges/backgrounds/fonsestelar_001.jpg">
+    </div>
+
+CSS:
+
+div#contenidor {
+    position:relative;
+    with: 100%;
+}
+
+#titol{
+    margin:0px; padding:0px;
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    /* ara ja tenim el vertex superior esquerra de la caixa al centre del contenidor */
+    /* i sols ens queda desplaçarla pq quedi a sobre del punt central ..... */
+    margin-top:  -50%;
+    margin-left: -50%;
+    /* tambe ho podem fer amb un transform: */
+    /*    transform:translate(-50%,-50%);   */
+}

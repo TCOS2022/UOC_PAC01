@@ -1,0 +1,138 @@
+DESDE TERMINAL
+
+Inicialitzant el repositori amnb dades locals
+
+	git init
+
+	git config user.name "tete"
+
+	git config user.email "cap"   <<< ATENCIO!! es "email" noooo "mail"
+
+	nota: si afegim "--global" es configura per TOTS els repositoris que fem, no sols aquest
+
+
+Comprovem si realment tenim una branca "master" ....
+
+	git status
+
+	git branch   (ha de sortir la MASTER, si no, es que encara no hi es del tot pq no te cap commit)
+	
+	nota: no podra crear brnques noves fins qeu no tinguis la "master" activa, i pr aixo et cal afegir un commit o, potser, un tag
+
+
+Si no la tenim, afegirem un arxiu i farem un commit ....
+
+	touch readme.md
+
+	git add "readme.md"
+
+	git status
+
+	git commit -m "Initializing repository (MASTER)"
+
+	git branch
+
+	NOTA: Ara SI que hauriem de veure la branca master ... amb un "*" que ens marca que es la "activa"
+
+
+
+ja podem crear les branchs paraleles ....
+
+	git branch dev
+
+	nota: per renombrar la branch, podem fer servir: "git branch -m nou_nom"
+
+	nota: per ESBORRAR la branch, "git branch -d nom_branca" i si ho volem
+		forçar SENSE fer un merge anterior: "git branch -D nom branca"
+
+	nota: tambe podem fer servir: git branch nova_branca branca_pare
+
+
+anem a la dev, i li afegirem un arxiu i farem un commit
+
+	git checkout dev
+
+	touch dev.txt
+
+	git add dev.txt
+	
+	git commit -m "Inici DEV"
+
+
+Ara podem fer una segona branch, penjada de dev ....
+
+	git branch dev01
+
+	git checkout dev01
+
+
+
+i li posarem un tag i tot ..... IMPORTANT: NO POSAR nom i tag iguals!!!!!
+
+	git tag -a "DEV_01" -m "DEV/DEV01 -> Versio AMB floats"
+
+	touch dev01.txt
+	
+	git add "dev01.txt"
+
+	git commit -m "Inici DEV/DEV01"
+
+
+
+farem el mateix per la segona ....
+nota: amb "git checkout -b nom_branca" fem la branca nova i saltem a ell tot junt
+
+	git checkout dev
+
+	git branch dev02
+
+	git checkout dev02
+
+	git tag -a "DEV_02" -m "DEV/DEV02 -> Versio SENSE floats"	
+
+	touch dev02.txt
+
+	git add "dev02.txt"
+
+	git commit -m "Inici DEV/DEV02"
+
+
+I finalment, per unificar les branques:
+Anem a la branca que rebra els arxius de la altre
+
+	git checkout dev
+
+Per evitar avisos de "ambigous refname" primer verifiquem que no hagin
+noms de branques o/i de tags iguals ...
+
+	git show-ref --heads --tags
+
+i si cal importem els canvis posant la ruta complerta ....
+
+	git merge refs/heads/dev01
+
+	git merge refs/heads/dev02 --no-ff
+
+	nota: el "--no-ff" permet mantenir la branca importada, despres del merge
+	nota: potser ens demanara posar un commit ....
+
+	nota: Vim SAVE+EXIT --> esc > Shift + ZZ
+	nota: Vim only EXIT --> esc > Shift + ZX
+
+Per obtenir una representacio de totes les branques:
+
+	git log --graph --decorate --oneline --all
+
+
+
+
+
+
+
+
+
+
+
+
+
+

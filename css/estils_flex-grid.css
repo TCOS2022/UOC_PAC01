@@ -1,0 +1,46 @@
+/*
+************************************************
+*** ARXIU CSS PER FER EL LAYOUT SENSE FLOATS ***
+************************************************
+*/
+
+
+
+/* ************************************ 
+   **** CSS GENERICS A TOTA LA WEB ****
+   ************************************ */
+
+/* ***** FIXING FONTS ***** */
+/* Definim font base per gestionar-ho tot amb em/rem */
+/* Per defecte es de 16px, pero ho podriem canviar ... */
+html {font-size: 16px;}
+
+/* ***** RESET BASIC CSS ***** */
+/* Eliminem margins i paddings i definim el model de caixa a "border-box" */
+* {
+    margin:0px; 
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* ***** AREES COMUNS DEL DISSENY ***** */
+
+/* NAV */
+
+/* HEADER */
+
+/* MAIN */
+
+/* FOOTER */
+
+
+
+/* **************************************************
+   **** ESPECIFICACIONS PER PAGINES DETERMINADES ****
+   ************************************************** */
+
+/* INICI */
+
+/* CV */
+
+/* CONTACTE */

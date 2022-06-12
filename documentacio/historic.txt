@@ -24,6 +24,7 @@ Crearem branca DEV per treballar-hi
 Inici projecte proposat --> first commit !!!!kdir css
 
 	git add .
+
 	git commit -m "initialize project and folder structure"git add .
 
 	git pull UOC_PAC01 main

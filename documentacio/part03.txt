@@ -55,6 +55,12 @@ Exemple estils CSS pels <ul>
 
 Exemple estils CSS pels <li>
 
+Notes
+
+A ultima hora me adonat de que al floatejar cap a la dreta, els elements del menu surten
+en ordre invers. la solucio facil seria canviar el ordre al html o be psoar dos blocs per agruparlos
+com volem acabar fent servir flex, doncs no afegirem mes estrucutura al html i sols deixem
+aqui apuntat que ja ens em adonat del pbma i les 2 posibles solucions.
 
 Com ja em fet la de cv i la de contacte amb floats, ara ho intentarem amb flex i grid
 flex es molt util per centrar elements en una sola linia o columna

@@ -1,0 +1,49 @@
+Comprovar les branques:
+
+    git branch --list
+
+Esborrar branca *** LOCAL ***
+NOTA: "-D" (-delete -force) la esborrara si o si, tal i com esta, sense actualitzar res
+NOTA: "-d" (-d) la elimina sols si ja esta actualitzada i fusionada
+
+    git branch -d branch_name
+    
+    git branch -D branch_name
+
+Esborrar branca *** REMOTA ***
+NOTA: ho podem fer de dues maneres:
+
+    git push remote_name --delete branch_name
+
+    git push remote_name :branch_name
+
+Renombrar branca *** LOCAL ***
+
+    primer ens posem a la branca a Renombrar
+
+        git checkout nom_actual_branca
+
+    li canviem el nom
+
+        git branch -m nom_nou_branca
+
+    O be desde una branca diferent amb:
+
+        git branch -m old-name new-name
+
+    comrpovem que realment s ha canviat ....
+
+        git branch --list
+
+Un cop renombrada de manera local, em de fer el mateix als posibles remots, pero per
+aixo en caldra ESBORRAR la antiga, pujar la nova i actualitzarla.
+
+    Esborrem una branca antiga del remot
+        
+        git push origin --delete nombre-anterior
+
+    Pujem la nova branca al remot
+
+        git push origin :nombre-anterior nombre-nuevo 
+
+

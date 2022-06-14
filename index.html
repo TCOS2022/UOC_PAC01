@@ -10,7 +10,7 @@
     <!-- normalize.css per regularitzar estils generals -->
         <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <!-- estils.css per totes les pagines -->
-        <link rel="stylesheet" href="css/estils.css".css">
+        <link rel="stylesheet" href="css/estils_flex.css".css">
     <!-- cv.css per si cal algun estil especific de la pagina -->
         <!-- <link rel="stylesheet" href="css/cv.css"> -->
 </head>
@@ -99,29 +99,34 @@
 
             <section id="aficions">
                 <h2>Les meves aficions</h2>
-                <div>
-                    <span>La meva aficio boja 1</span>
-                    <img src="media/icones/airplane-outline.svg" alt="icona de la aficio 1" height="16px">
+                <!-- fem 2 files de 3 elements cadascuna -->
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <span>La meva aficio boja 1</span>
+                        <img src="media/icones/airplane-outline.svg" alt="icona de la aficio 1" height="16px">
+                    </div>
+                    <div class="flex-item">
+                        <span>La meva aficio boja 2</span>
+                        <img src="media/icones/book-outline.svg" alt="icona de la aficio 2" height="16px">
+                    </div>
+                    <div class="flex-item">
+                        <span>La meva aficio boja 3</span>
+                        <img src="media/icones/camera-outline.svg" alt="icona de la aficio 3" height="16px">
+                    </div>
                 </div>
-                <div>
-                    <span>La meva aficio boja 2</span>
-                    <img src="media/icones/book-outline.svg" alt="icona de la aficio 2" height="16px">
-                </div>
-                <div>
-                    <span>La meva aficio boja 3</span>
-                    <img src="media/icones/camera-outline.svg" alt="icona de la aficio 3" height="16px">
-                </div>
-                <div>
-                    <span>La meva aficio boja 4</span>
-                    <img src="media/icones/code-outline.svg" alt="icona de la aficio 4" height="16px">
-                </div>
-                <div>
-                    <span>La meva aficio boja 5</span>
-                    <img src="media/icones/beer-outline.svg" alt="icona de la aficio 5" height="16px">
-                </div>
-                <div>
-                    <span>La meva aficio boja 6</span>
-                    <img src="media/icones/camera-outline.svg" alt="icona de la aficio 5" height="16px">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <span>La meva aficio boja 4</span>
+                        <img src="media/icones/code-outline.svg" alt="icona de la aficio 4" height="16px">
+                    </div>
+                    <div class="flex-item">
+                        <span>La meva aficio boja 5</span>
+                        <img src="media/icones/beer-outline.svg" alt="icona de la aficio 5" height="16px">
+                    </div>
+                    <div class="flex-item">
+                        <span>La meva aficio boja 6</span>
+                        <img src="media/icones/camera-outline.svg" alt="icona de la aficio 5" height="16px">
+                    </div>
                 </div>
             </section>
         </main>

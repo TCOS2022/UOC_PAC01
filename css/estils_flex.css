@@ -110,7 +110,6 @@ ho farem amb selectors amb cascada */
 main{
    position:relative;
    width: 100%;
-   padding: 1rem 1rem;
    /* border: 2px solid red */
 }
 
@@ -170,6 +169,25 @@ section#experiencia>div{
    padding:1rem;
    display:flex;
    justify-content: space-evenly;
+}
+
+/* section#aficions{}*/
+section#aficions div.flex-container{
+   display:flex;
+   justify-content: space-around;
+}
+
+section#aficions div.flex-item{
+   border: darkgray 2px solid;
+   border-radius: 20px;
+   padding:1rem 2rem;
+}
+
+section#aficions div.flex-item img{
+   height:1.5rem;
+   border: 1px solid red;
+   vertical-align: bottom;
+   background-color: red;
 }
 
 /* CV */

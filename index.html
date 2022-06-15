@@ -18,6 +18,16 @@
     <div class="mainContainer"> <!-- contenidor principal de la web -->
         <!-- BARRA DE NAVEGACIO -->
         <nav>
+            <!-- UPDATE!!!!:
+            Amb flex podem separar en dos blocs sense fer els divs, sol caldra que afegim un 
+            margin-left:auto al 2 eleemnt pq posi tot el espai qeu pugui fer servir entre el 2
+            i el 1 element, aixi ens estalviem fer una llsiat dintre de una llista, i tornem
+            a la estructura plantejda al principi o al dev_floats.
+
+             url -> https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+            -->
+
+            <!-- amb doble llista anidada -->
             <ul class="list_outer">
                 <!-- dividem la llista en dos li, per poder posicionar-ho correctament amb flex -->
                 <li><a href="#"><img src="media/icones/home.svg" alt="home" height="16px"></a></li>
@@ -28,8 +38,17 @@
                         <li><a href="contacte.html">Contacte</a></li>
                     </ul>
                 </li>
-
             </ul>
+
+            <!-- separant a partir del 2 element amb margin-left:auto al CSS -->
+            <!--
+            <ul>
+                <li><a href="#"><img src="media/icones/home.svg" alt="home"></a></li>
+                <li><a href="index.html">    inici    </a></li>
+                <li><a href="cv.html">       CV       </a></li>
+                <li><a href="contacte.html"> Contacte </a></li>
+            </ul>
+            -->
         </nav>
 
         <header>
@@ -117,7 +136,7 @@
                 <div class="flex-container">
                     <div class="flex-item">
                         <span>La meva aficio boja 4</span>
-                        <img src="media/icones/code-outline.svg" alt="icona de la aficio 4" height="16px">
+                        <img src="media/icones/camera-outline.svg" alt="icona de la aficio 4" height="16px">
                     </div>
                     <div class="flex-item">
                         <span>La meva aficio boja 5</span>
@@ -125,7 +144,7 @@
                     </div>
                     <div class="flex-item">
                         <span>La meva aficio boja 6</span>
-                        <img src="media/icones/camera-outline.svg" alt="icona de la aficio 5" height="16px">
+                        <img src="media/icones/code-outline.svg" alt="icona de la aficio 5" height="16px">
                     </div>
                 </div>
             </section>
@@ -134,9 +153,9 @@
         <footer>
             <div>
                 <!-- afegim un width per controlar el desmadre del tamany .....-->
-                <a href="#"><img src="media/icones/logo_twitter.svg" alt="logo Twitter" width="50px"></a>
-                <a href="#"><img src="media/icones/logo_linkedin.svg" alt="logo LinkIn" width="50px"></a>
-                <a href="#"><img src="media/icones/logo_instagram.svg" alt="logo instagram" width="50px"></a>
+                <a href="#"><img src="media/icones/logo_twitter.svg" alt="logo Twitter"></a>
+                <a href="#"><img src="media/icones/logo_linkedin.svg" alt="logo LinkIn"></a>
+                <a href="#"><img src="media/icones/logo_instagram.svg" alt="logo instagram"></a>
             </div>
         </footer>
 

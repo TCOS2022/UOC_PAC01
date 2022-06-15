@@ -157,7 +157,7 @@ section#projectes>div{
 }
 
 section#projectes article {
-   margin:1rem
+   margin:1rem;
 }
 
 section#projectes article button{display:block; margin: 0 auto;}

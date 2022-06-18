@@ -61,3 +61,37 @@ section.cv_nav li{
 }
 
 section.cv_nav ul li img{height: 1rem; margin-right: 0.25rem}
+
+/* SECTION PERSONAL */
+
+section.cv_personal div p span {font-weight: bold;}
+
+section.cv_personal>div {
+    /* el definim com a flex container per poder ordenar els 2 elements */
+    display:flex;
+    gap:5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+section.cv_personal div img {height: 10rem;}
+
+/* SECTION IDIOMES */
+table{
+    width: 50%;
+    /* pq no creix fin al infinit ... i mes enlla!!! */
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+table caption {color:blue; margin-bottom: 1rem;}
+table,th,td {
+    border: 1px solid green;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+}
+
+
+

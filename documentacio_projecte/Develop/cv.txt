@@ -84,3 +84,119 @@ Nota: aprofitem i ja apuntem les ancles per anar saltant despres .....
     }
 
     section.cv_nav ul li img{height: 1rem; margin-right: 0.25rem}
+
+
+SECTION INFORMACIO PERSONAL 
+    <section class="cv_personal">
+
+        <h2>Dades personals</h2><br>
+
+        <div>
+            <div>
+                <p><span>Nom:</span>   Tete Cohete</p>
+                <p><span>Adreça:</span>   Rue del Percebe 13</p>
+                <p><span>DNI:</span>  00 000 000 X</p>
+                <p><span>Telefon:</span>   666 666 666</p>
+                <p><span>Email:</span>  notinc@encaplloc.kk</p>
+            </div>
+
+            <img src="media/imatge/icones/smile.svg" alt="perfil">
+
+        </div>
+    </section>
+
+NOTES: val, aqui com la idea de origen es fer servir flex, elq eu farem sera organitzar ja
+les dades pensant en el flex-container i els flex-items, per tant posem el h2 ell sol ...
+
+i ara preparem una seccio per flexifizar .... com volem 2 elements, ens cal juntar les linies de text 
+en un sol flex-item, i la imatge en un altre, per fer-ho be, estari potser mes correcte
+posant tambe la img en un div .... pero no es imprescindible.
+
+per posar el text en negreta apliqeum un tag span a les linies <p> ....  podem tambe asignar-li
+una clase per atacarla amb css ... o be fem servir selectors especifitats, dos exemples, 
+mes generals (amb espais, indiquen qeu son a qualsevol nivell) i mes especifics (amb ">") fent
+referencia a quin nivell de indexat ens dirigim
+
+Ah!, fem servir "gap" per separar les columnes/items del flex. Funciona millor que aplicar
+un width/padding/margin pq el GAP sols aplica ENTRE items, no s aplica als item dels extrems.
+
+    section.cv_personal div p span {font-weight: bold;}
+
+    section.cv_personal>div {
+        /* el definim com a flex container per poder ordenar els 2 elements */
+        display:flex;
+        gap:5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.cv_personal div img {height: 10rem;}
+
+fianlement, per fer la cara mes grossa, sols cal aplicarli un height mes gran ....
+
+
+SECTION IDIOMES 
+Igual que en les sections anteriors, tenim un h2 de titol i una taula .....
+
+Les taules tenen un titol (caption) head i foot per posar cosetes i finalment el body
+on estan les dades.
+Les taules etas organitzades en file (tr) i a dintre lis definim les columnes (th i td)
+
+Podem agrupar files i columnes amb colspan i rowspan
+
+tambe podem "agrupar" els borders de cel-les adjacent amb: border-collapse: collapse;
+
+    <table>
+
+        <caption>-- Aixo es la llegenda  -- </caption>
+
+        <thead>
+            <tr>
+                <th>Llengues</th>
+                <th colspan="4">Nivells</th> 
+            </tr>
+            <tr>
+                <th>***</th>
+                <th>Baix</th>
+                <th>Mitja</th>
+                <th>Alt</th>
+                <th>Natiu</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr> 
+                 <td>Catala</td>   <td></td>  <td></td>  <td></td>  <td>*</td> 
+            </tr>
+            <tr> <td>Castella</td> <td></td>  <td></td>  <td></td>  <td>*</td> </tr>
+            <tr> <td>Angles  </td> <td></td>  <td>*</td> <td></td>  <td></td>  </tr>
+            <tr> <td>Frances </td> <td></td>  <td></td>  <td>*</td> <td></td>  </tr>
+            <tr> <td>Klingon </td> <td>*</td> <td></td>  <td></td>  <td></td>  </tr>
+        </tbody>
+
+        <tfoot>
+            <tr> <td colspan="5">-- Aixo el el peu de la taula --</td> </tr>
+        </tfoot>
+    </table>
+
+Nota: com a exemple, posem la linia del head en 2 linies i afegim el caption i el peu
+
+i el codi CSS3:
+    /* SECTION IDIOMES */
+    table{
+        width: 50%;
+        /* pq no creixi fin al infinit ... i mes enlla!!! */
+        max-width: 25rem;
+        /* per centrar la taula.... */
+        margin: 0 auto;
+        margin-top: 2rem
+    }
+
+    table caption {color:blue; margin-bottom: 1rem;}
+    table,th,td {
+        border: 1px solid green;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 0.5rem 1.5rem;
+    }
+

@@ -126,6 +126,7 @@ section.inici_aficions div.flex-item{
     margin-bottom:1rem;
     /* i per aliniar la icona i el text .... */
     display:flex;
+    justify-content: center;
     align-items: center;
 }
 

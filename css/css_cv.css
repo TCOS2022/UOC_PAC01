@@ -93,5 +93,18 @@ table,th,td {
     padding: 0.5rem 1.5rem;
 }
 
+/* SECTION ESTUDIS */
+
+section.cv_estudis ul {
+    width: 75%;
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+section.cv_estudis ul li {padding: 0.5rem 0rem;}
+
+section.cv_estudis ul li span {font-weight: bold;}
+
 
 

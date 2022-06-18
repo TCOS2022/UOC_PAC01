@@ -200,3 +200,37 @@ i el codi CSS3:
         padding: 0.5rem 1.5rem;
     }
 
+
+SECTION INFORMACIO ACADEMICA
+Val, la estructura que ja coneixem, un h2 ... i un contingut, en aquest cas sera una llista que arreglarem despres al css
+
+    <section class="cv_estudis">
+
+        <h2>Informacio academica</h2>
+
+        <ul>
+            <li>
+                <span>Estudis 1</span> <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span>Estudis 2</span> <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem ad obcaecati!
+            </li>
+            <li>
+                <span>Estudis 3</span> <br>
+                Lorem ipsum dolor sit amet.
+            </li>
+            <li>
+                <span>Estudis 4</span> <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos perferendis et natus aliquam, dolorem id quia nesciunt.
+            </li>
+        </ul>
+    </section>
+
+NOTES: valeeee .... es una llisat amb un titol amb negreta, que marcarem amb un span ... i li afegim un <br>
+que inclues es podria fer amb un ::after al css.....
+
+Al CSS el que farem sera, reposicionarlo la llista pq les boletes qeudin a dintre i no massa a la esquerra, posar
+el span a bold .... i afegir si volem una mica de espai pq respiri ... i llestos.
+

@@ -234,3 +234,43 @@ que inclues es podria fer amb un ::after al css.....
 Al CSS el que farem sera, reposicionarlo la llista pq les boletes qeudin a dintre i no massa a la esquerra, posar
 el span a bold .... i afegir si volem una mica de espai pq respiri ... i llestos.
 
+
+SECTION INFORMACIO Laboral
+Calcada a la anterior, sols caldra ajustar una miqueta els spans ... ja que aqui en tenim 2 diferents
+
+    <section class="cv_laboral">
+
+        <h2>Informacio laboral</h2>
+
+        <ul>
+            <li>
+                <span class="negreta">Estudis 1</span> 
+                <span class="italica"> (lloc,periode) </span>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 2</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 3</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 4</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+        </ul>
+    </section>
+
+NOTES: Per atacar els spans, podem posar-lis una clase a cadascun, o aplicar selectors
+AMB SELECTORS:
+
+section.cv_laboral ul li>span:first-child{font-weight:bold;}
+section.cv_laboral ul li>span:last-child{font-style: italic;}
+AMB CLASSES:
+
+.cv_laboral span.negreta {font-weight:bold;}
+.cv_laboral span.italica {font-style: italic;}
+

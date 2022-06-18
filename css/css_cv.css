@@ -96,15 +96,26 @@ table,th,td {
 /* SECTION ESTUDIS */
 
 section.cv_estudis ul {
-    width: 75%;
-    max-width: 25rem;
+    width: 90%;
+    max-width: 40rem;
     margin: 0 auto;
     margin-top: 2rem
 }
 
 section.cv_estudis ul li {padding: 0.5rem 0rem;}
 
-section.cv_estudis ul li span {font-weight: bold;}
+
+/* SECTION LABORAL */ 
+section.cv_laboral ul {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+section.cv_laboral ul li {padding: 0.5rem 0rem;}
+section.cv_laboral ul li>span:first-child{font-weight:bold;}
+section.cv_laboral ul li>span:nth-child(2){font-style: italic;}
 
 
 

@@ -103,6 +103,7 @@ section.cv_estudis ul {
 }
 
 section.cv_estudis ul li {padding: 0.5rem 0rem;}
+section.cv_estudis ul li>span{font-weight:bold;}
 
 
 /* SECTION LABORAL */ 

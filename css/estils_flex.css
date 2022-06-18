@@ -63,7 +63,7 @@ ho farem amb selectors amb cascada */
 }
 .mainContainer>nav ul.list_outer>li>a>img{
    color:white; 
-   height:2rem; 
+   height:1rem; 
 }
 
 .mainContainer>nav ul.list_inner{

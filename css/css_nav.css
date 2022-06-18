@@ -1,0 +1,38 @@
+nav.siteNav {
+	/* Definim el color de fons, el alt i el ample */
+	width: 100%;
+	height: 0.75 rem;
+	background-color: black;
+	/* El posem com a flex-container, i definim les seves propietats */
+	/* aixi els items del flex son directament, els <a> */
+	display:flex;
+	/* justifiquem en alçada, que es la aliniacio en el 2 eix .... */
+	 align-items: center; 
+}
+
+nav.siteNav a {
+	/* Eliminem el subratllat i els posem de color quasi blanc */
+	color: white;
+	text-decoration:none;
+    padding: 0 0.5rem;
+    border: green 2px solid;
+}
+
+nav.siteNav a:first-child {
+	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
+	margin-right: auto;
+    /* i el pintem del color gris que ens demanen tambe */
+    background-color:grey
+}
+
+nav.siteNav a:last-child {
+    /* com ens demanen que el ultim no tingui separacio amb el marge */
+    padding-right:0;
+}
+
+nav.siteNav a img {
+	/* el definim com a block per poder controlar alt i ample; */
+    width: 25px;
+	/* li posem el color de fons i el de la icona */
+	color:white;
+}

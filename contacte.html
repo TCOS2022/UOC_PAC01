@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacte</title>
+
+    <!-- Afegim arxius CSS, normalize.css per unificar criteris de estils -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- afegim arxius CSS, local a la web -->
+    <link rel="stylesheet" href="css/estils.css">
+    <!-- afegim arxius CSS especifics -->
+    <link rel="stylesheet" href="css/css_contacte.css">
+
+</head>
+<body>
+
+<div class="mainContainer">
+    <header>
+        <!-- aqui posem el codi que tenim del HEADER/NAV -->
+    </header>
+
+    <main>
+
+        <section class="titol">
+            <h1>Contacte</h1>
+            <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
+        </section>
+
+        <section>
+            
+            <h2>Parlem!</h2>
+
+            <form class="contacteFormulari" action="" method="post">
+                <fieldset>
+                    <label for="form_name">Nom</label><br>
+                    <input class="ample" type="text" name="form_name" placeholder="el teu nom" required><br>
+                    <label for="form_email">Correu electronic</label><br>
+                    <input class="ample" type="email" name="form_email" placeholder="el teu email" equired><br>
+                    <label for="form_comment">Comentaris</label><br>
+                    <textarea class="ample" name="form_comment" rows="6" placeholder="el teu comentari"></textarea>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="form_checkbox"></label>
+                    <input type="checkbox" name="form_checkbox" id="" checked> He llegit, i accepto, la <a href="#">politica de privacitat</a>
+                </fieldset>
+    
+                <fieldset> 
+                    <button type="submit">ENVIAR</button> 
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- aqui posem el codi que tenim del FOOTER -->
+    </footer>
+</div>
+   
+</body>
+</html>

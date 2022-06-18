@@ -19,7 +19,7 @@ Un cop definit el HEADER/NAV anem a veure la estructura que podem fer servir a l
 Per mantenir certa llogica, farem qeu el MAIN de cada pagina es divideixi en sections
 
 CONTACTE -> section amb el titol
-		  -> sction amb el formulari
+		  -> section amb el formulari
 
 CV       -> section amb el titol
 		  -> section amb el nav secondari	

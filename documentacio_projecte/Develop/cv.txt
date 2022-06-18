@@ -1,0 +1,86 @@
+Val, fem servir el layout qeu em dissenyat amb contenidor, header/main/footer ....
+
+Tenim les seguents seccions
+
+    titol
+
+    menu de navegacio secundari
+
+    pesonal
+
+    idiomes
+
+    estudis
+
+    laboral
+
+En aquest cas podem veure que tenim les seccions PARS de color de fons gris.
+
+***** CODI HTML *****
+    <main>
+        <section class="titol">
+            <h1>Curriculum Vitae</h1>
+            <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
+        </section>
+        <section class="cv_nav"></section>
+        <section class="cv_personal"></section>
+        <section class="cv_idiomes"></section>
+        <section class="cv_estudis"></section>
+        <section class="cv_laboral"></section>
+    </main>
+
+NOTA: la part del titol es generica per totes les pagines, per tant no la personalitzem amb el nom
+de la pagina com les altres ....
+
+SECTION INDEX
+Val, per aqeusta seccio, com es una area de navegacio, la fiquem en tags NAV, 
+podriem simpliifcar codi eliminant etiquetes pero mantindrem la estructura pq sigui coherent en tota la web.
+Com ho em configurat com a llista, ens toca arreglar diferents cosetes com la bola
+que marca cada li ....
+
+    <section class="cv_nav">
+        <h2>Index</h2>
+        <nav>
+            <ul>
+                <li>
+                    <img src="" alt="icona dades personals">
+                    <a href="#cv_personal">Dades personals</a>
+                </li>
+                <li>
+                    <img src="" alt="icona idiomes">
+                    <a href="#cv_idiomes">Idiomes</a>
+                    </li>
+                <li>
+                    <img src="" alt="icona estudis">
+                    <a href="#cv_estudis">Estudis</a>
+                </li>
+                <li>
+                    <img src="" alt="icona laboral">
+                    <a href="#cv_laboral">Laboral</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+Nota: aprofitem i ja apuntem les ancles per anar saltant despres .....
+
+    /* SECTION NAV */
+    section.cv_nav ul {
+        /* eliminem les boletes */
+        list-style-type: none;
+        /* la configurem coma flex i posem les coses br */
+        display:flex;
+        justify-content: center;
+        /* el sepraem una mica del h2 ... */
+        margin-top:1.5rem;
+    }
+
+    section.cv_nav li{
+        /* ho configurem com a flex per centrar la imtge i el text */
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.75rem;
+    }
+
+    section.cv_nav ul li img{height: 1rem; margin-right: 0.25rem}

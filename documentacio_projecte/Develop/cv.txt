@@ -265,12 +265,42 @@ Calcada a la anterior, sols caldra ajustar una miqueta els spans ... ja que aqui
     </section>
 
 NOTES: Per atacar els spans, podem posar-lis una clase a cadascun, o aplicar selectors
-AMB SELECTORS:
+    AMB SELECTORS:
 
-section.cv_laboral ul li>span:first-child{font-weight:bold;}
-section.cv_laboral ul li>span:last-child{font-style: italic;}
-AMB CLASSES:
+    section.cv_laboral ul li>span:first-child{font-weight:bold;}
+    section.cv_laboral ul li>span:last-child{font-style: italic;}
+    AMB CLASSES:
 
-.cv_laboral span.negreta {font-weight:bold;}
-.cv_laboral span.italica {font-style: italic;}
+    .cv_laboral span.negreta {font-weight:bold;}
+    .cv_laboral span.italica {font-style: italic;}
+
+I al final ho fem aixi:
+    /* SECTION LABORAL */ 
+    section.cv_laboral ul {
+        width: 90%;
+        max-width: 40rem;
+        margin: 0 auto;
+        margin-top: 2rem
+    }
+
+    section.cv_laboral ul li {padding: 0.5rem 0rem;}
+    section.cv_laboral ul li>span:first-child{font-weight:bold;}
+    section.cv_laboral ul li>span:nth-child(2){font-style: italic;}
+
+NOTA: no se pq pero amb last-child no em funcionava, aixi qeu he fet servir nth-child.
+
+
+
+Com a ultim canvi que cal fer, esta la asignacio del nav secondari, recordem que ens cal una ancla en forma de IDIOMES
+per tal qeu el tag <a> salti fins alla, afegirem doncs a cada section un id pq pugui anar-hi
+
+    <section class="cv_personal" id="cv_dp">
+    <section class="cv_personal" id="cv_idiomes">
+    <section class="cv_personal" id="cv_estudis">
+    <section class="cv_personal" id="cv_laboral">
+
+NOTA: SI volem que s´obri en una altre apgina, afegirem target="_blank" al <a>
+
+    <a href="home.html" target="_blank"> HOME! </a> obrira una finestra nova cada cop que fem click
+
 

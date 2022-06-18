@@ -1,0 +1,31 @@
+Despres de veure i estudiar-nos totes 3 pagines, i partint de un layout standar
+del tipus
+	
+	HEADER
+	NAV
+	MAIN	
+	FOOTER
+
+On definim la part MAIN com allo que no es repeteix a les pagines, 
+i le HEADER/NAV/FOOTER com allo que es SI va repetint al llarg de aquestes
+
+En el nostre projecte No tenim logo/titol principal, aixi qeu podrem eliminar el
+HEADER o be in cloure en ell el NAV
+
+HEADER --> inclou el NAV general
+
+
+Un cop definit el HEADER/NAV anem a veure la estructura que podem fer servir a la web
+Per mantenir certa llogica, farem qeu el MAIN de cada pagina es divideixi en sections
+
+CONTACTE -> section amb el titol
+		  -> sction amb el formulari
+
+CV       -> section amb el titol
+		  -> section amb el nav secondari	
+		  -> sctions de dades, idiomes, experiencia ....
+
+INDEX     -> section amb el titol
+		  -> sections amb la presencio, cards, experiencia html/css/js, aficions
+
+Val? doncs anem a replicar aquesta estructura.

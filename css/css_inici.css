@@ -103,3 +103,30 @@ section.inici_experiencia>div{
 }
 
 section.inici_experiencia img{width: 15%;}
+
+
+/* SECTION INICI_AFICIONS */
+section.inici_aficions>div{
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:space-around;
+    gap:2.5%;
+    border:5px dotted blue;
+    position:relative;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+}
+
+section.inici_aficions div.flex-item{
+    width: 30%;
+    border: dotted green 2px;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom:1rem;
+    /* i per aliniar la icona i el text .... */
+    display:flex;
+    align-items: center;
+}
+
+section.inici_aficions div.flex-item img{height: 1rem; padding: 0 1rem}

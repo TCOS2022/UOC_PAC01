@@ -97,3 +97,9 @@ una distribucui de dos flex-items i ja esta.
     }
 
 section.inici_experiencia img{width: 15%;}
+
+
+SECTION AFICIONS 
+Aqui farem alguns canvis, atacarem el grup de divs via un nom de clase ....
+Posarem un joc de cards i li demanarem al flex que ocupi 2 files .....
+

@@ -50,4 +50,50 @@ una distribucui de dos flex-items i ja esta.
     val, el codi css pot canviar lleujerament pero en essencia es el mateix, definim un flex-container i dintre 
     tenim dos flex-items, un amb el text i l altre amb la imatge ....
 
-    
+    /* SECTION INICI_PROJECTES */
+    section.inici_projectes>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        /*justify-content:space-around;*/
+        gap:2.5%;
+        border:5px dotted blue;
+        position:relative;
+        margin: 1rem auto;
+    }
+
+    section.inici_projectes article {outline: auto;}
+
+    section.inici_projectes article img {width: 100%;}
+    section.inici_projectes article p {padding: 1rem; text-align: justify;}
+    section.inici_projectes article button {display:block;padding: 2rem auto; margin:1rem auto;} 
+
+
+    SECTION EXPERIENCIA 
+    Vale, aqui l unic que cal destacar es que el color de fons canvia, la resta igual es un flexbox
+    amb 3 items .....
+
+    <section class="inici_experiencia">
+        <h2>Experiencia</h2>
+        <div>
+            <img src="media/imatge/continguts/index/grafic_html5.png" alt="grafic percentual HTML5">
+            <img src="media/imatge/continguts/index/grafic_css3.png"  alt="grafic percentual CSS3">
+            <img src="media/imatge/continguts/index/grafic_js.png"    alt="grafic percentual JS">
+        </div>
+    </section>
+
+    codi Css3/* SECTION INICI_EXPERIENCIA */
+    section.inici_experiencia{background-color: black;padding:2rem}
+    section.inici_experiencia h2{color:white}
+    section.inici_experiencia>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        justify-content:space-around;
+        gap:2.5%;
+        border:5px dotted blue;
+        position:relative;
+        margin: 1rem auto;
+    }
+
+section.inici_experiencia img{width: 15%;}

@@ -35,7 +35,7 @@ section.titol h1{
     z-index: 1;
 }
 
-h2{text-align: center;}
+h2{text-align: center; padding: 1rem;}
 
 section{width: 100%; margin:1rem auto}
 
@@ -54,14 +54,14 @@ section.inici_presentacio>div {
 
 /* i aqui tenim els flex-items */
 section.inici_presentacio>div>div:first-child {
-    border: 2px solid green;
+    /*border: 2px solid green;*/
     width: 66%;
-    background-color:yellow;
+    /*background-color:yellow;*/
     padding: 0 1rem
 }
 
 section.inici_presentacio>div>div:last-child {
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     position:relative;
     width: 33%;
     margin-left:1rem;
@@ -69,3 +69,37 @@ section.inici_presentacio>div>div:last-child {
 
 section.inici_presentacio>div>div p {text-align: justify;}
 section.inici_presentacio img{width: 100%;}
+
+/* SECTION INICI_PROJECTES */
+section.inici_projectes>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        /*justify-content:space-around;*/
+        gap:2.5%;
+        border:5px dotted blue;
+        position:relative;
+        margin: 1rem auto;
+}
+
+section.inici_projectes article {outline: auto;}
+
+section.inici_projectes article img {width: 100%;}
+section.inici_projectes article p {padding: 1rem; text-align: justify;}
+section.inici_projectes article button {display:block;padding: 2rem auto; margin:1rem auto;} 
+
+/* SECTION INICI_EXPERIENCIA */
+section.inici_experiencia{background-color: black;padding:2rem}
+section.inici_experiencia h2{color:white}
+section.inici_experiencia>div{
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:space-around;
+    gap:2.5%;
+    border:5px dotted blue;
+    position:relative;
+    margin: 1rem auto;
+}
+
+section.inici_experiencia img{width: 15%;}

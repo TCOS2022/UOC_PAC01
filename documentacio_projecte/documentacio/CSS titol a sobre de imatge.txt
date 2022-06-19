@@ -1,9 +1,9 @@
 farem 2 caixes
 
-al fer servis position aboslute, posicionem el vertex esquerra superior
-en referenci al contenidor
+al fer servir "position aboslute", posicionem el vertex esquerra superior
+en referencia al contenidor
 
-ara movem la posicio del tontenidor del text pq el seu centre coincideixi
+ara movem la posicio del contenidor del text pq el seu centre coincideixi
 amb el punt de centrat anterior
 
 HTML:

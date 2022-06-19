@@ -1,226 +1,161 @@
 <!DOCTYPE html>
-
-<!-- Posem "ca" pq es el llengua en que esta feta la web .... -->
 <html lang="ca">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
-
-    <!-- Enllaços als CSS, fonts i llibreries varies -->
-    <!-- normalize.css per regularitzar estils generals -->
-        <link rel="stylesheet" href="css/normalize.css">
-    <!-- estils.css per totes les pagines -->
-        <link rel="stylesheet" href="css/estils_float.css".css">
-    <!-- cv.css per si cal algun estil especific de la pagina -->
-        <!-- <link rel="stylesheet" href="css/cv.css"> -->
+    <title>Pagina de CV</title>
+    
+    <!-- Afegim arxius CSS, normalize.css per unificar criteris de estils -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- afegim arxius CSS, local a la web -->
+    <link rel="stylesheet" href="css/estils.css">
+    <!-- afegim arxius CSS especifics -->
+    <link rel="stylesheet" href="css/css_cv.css">
 </head>
+
 <body>
-    <div class="mainContainer"> <!-- contenidor principal de la web -->
-        <!-- BARRA DE NAVEGACIO -->
-        <nav>
-            <ul>
-                <li><a href="#"><img src="media/icones/home.png" alt="home" height="16px"></a></li>
-                <li><a href="index.html">Inici</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
-            </ul>
-        </nav>
 
+    <div class="mainContainer">
+        
         <header>
-            <!-- SECCIO DEL TITOL DE LA PAGINA -->
-            <h1>Curriculum Vitae</h1>
-            <!--
-                Podem carregar una imatge aleatoria gratuita del servidors picsum ....
-                    <img src="https://picsum.photos/1000/200" alt="imatge aleatoria de 2k x 300 px">
-
-                o be posem una de nostra
-                    <img src="media/imatges/backgrounds/cv_titol_background.png" alt="Fons pel titol de la pagina CV ">
-            -->
-            <img src="https://picsum.photos/1000/200" alt="imatge aleatoria de 2k x 300 px">
-
+            <!-- aqui posem el codi que tenim del HEADER/NAV -->
         </header>
-   
+
         <main>
-            <section id="index">
+            <section class="titol">
+                <h1>Curriculum Vitae</h1>
+                <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
+            </section>
+
+            <section class="cv_nav">
                 <h2>Index</h2>
                 <nav>
                     <ul>
-                        <!-- 
-                            per saltar a una seccio del propi document, sol cal tenirla nombrada amb un id tag i
-                            apuntar el <a> cap aquest id amb href="#id"
-                        -->
                         <li>
-                            <img src="media/icones/contact.svg" alt="icona Dades personals" width="16px">
-                            <a href="#dadespersonals">Dades Personals</a>
+                            <img src="media/imatge/icones/contact.svg" alt="DP">
+                            <a href="#cv_dp">Dades personals</a>
                         </li>
                         <li>
-                            <img src="media/icones/lang.svg" alt="icona Idiomes" width="16px">
-                            <a href="#idiomes">Idiomes</a>
+                            <img src="media/imatge/icones/lang.svg" alt="I">
+                            <a href="#cv_idiomes">Idiomes</a>
                         </li>
                         <li>
-                            <img src="media/icones/books.svg" alt="icona estudis" width="16px">
-                            <a href="#estudis">Estudis</a>
+                            <img src="media/imatge/icones/books.svg" alt="E">
+                            <a href="#cv_estudis">Estudis</a>
                         </li>
                         <li>
-                            <img src="media/icones/screen.svg" alt="icona laboral" width="16px">
-                            <a href="#laboral">Laboral</a>
+                            <img src="media/imatge/icones/screen.svg" alt="L">
+                            <a href="#cv_laboral">Laboral</a>
                         </li>
                     </ul>
                 </nav>
             </section>
 
-            <section id="personal">
-                <h2>Informacio personal</h2>
-                <div class="dadesPersonals_text">
-                    <span class="bold">Nom:</span> Tete Cohete <br>
-                    <span class="bold">Adreça:</span> Rue del Percebe nº 13<br>
-                    <span class="bold">DNI</span> 00.000.000 X <br>
-                    <span class="bold">Telefon</span> +34 555 555 555<br>
-                    <span class="bold">Email</span> noname@nodomain.tut<br>
-                </div>
-                <div class="dadesPersonals_img">
-                    <img src="media/continguts/profile_man.jpg" alt="foto personal" width="100px">
+            <section class="cv_personal" id="cv_dp">
+                <h2>Dades personals</h2><br>
+                <div>
+                    <div>
+                        <p><span>Nom:</span>   Tete Cohete</p>
+                        <p><span>Adreça:</span>   Rue del Percebe 13</p>
+                        <p><span>DNI:</span>  00 000 000 X</p>
+                        <p><span>Telefon:</span>   666 666 666</p>
+                        <p><span>Email:</span>  notinc@encaplloc.kk</p>
+                    </div>
+                    <img src="media/imatge/icones/smile.svg" alt="perfil">
                 </div>
             </section>
 
-            <section id="idiomes">
-                <h2>Idiomes </h2>
+            <section class="cv_idiomes" id="cv_idiomes">
+                <h2>Idiomes</h2>
                 <table>
-                    <caption>aixo es el caption de la taula</caption>
+                    <caption>-- Aixo es la llegenda  -- </caption>
                     <thead>
                         <tr>
-                            <th>Idioma</th>
-                            <th>Nivell baix</th>
-                            <th>Nivell mig</th>
-                            <th>Nivell alt</th>
-                            <th>Nivell natiu</th>
+                            <th>Llengues</th>
+                            <th colspan="4">Nivells</th> 
+                        </tr>
+                        <tr>
+                            <th>***</th>
+                            <th>Baix</th>
+                            <th>Mitja</th>
+                            <th>Alt</th>
+                            <th>Natiu</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Catala</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>*</td>
+                            <td>Catala</td> <td></td> <td></td> <td></td> <td>*</td>
                         </tr>
                         <tr>
-                            <td>Castella</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>*</td>
+                            <td>Castella</td> <td></td> <td></td> <td></td> <td>*</td>
                         </tr>
                         <tr>
-                            <td>Angles</td>
-                            <td>*</td>
-                            <td></td>
-                            <td></td>
-                            <td>*</td>
+                            <td>Angles</td> <td></td> <td>*</td> <td></td> <td></td>
                         </tr>
                         <tr>
-                            <td>Frances</td>
-                            <td></td>
-                            <td>*</td>
-                            <td></td>
-                            <td></td>
+                            <td>Frances</td> <td></td> <td></td> <td>*</td> <td></td>
                         </tr>
                         <tr>
-                            <td>Klingon</td>
-                            <td>*</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Klingon</td> <td>*</td> <td></td> <td></td> <td></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="5">aixo es el foot de la taula</td>
-                        </tr> 
+                            <td colspan="5">-- Aixo es el peu de la taula --</td> 
+                        </tr>
                     </tfoot>
                 </table>
-                <br>
             </section>
 
-            <section id="estudis">
-                <h2>Informacio Academica</h2>
+            <section class="cv_estudis" id="cv_estudis">
+                <h2>Informacio academica</h2>
                 <ul>
-                    <!-- Sols amb html, podem fer servir el <strong> i el <em> per indicar "negrita" i "italica" -->
-                    <!-- Posem SOLS 1 element de mostra que treurem al afegir el CSS -->
                     <li>
-                        <strong>Titol feina feta DEMO!! </strong><br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
-                    </li>   
-
-                    <li>
-                        <span class="list_titol">Titol feina feta</span><br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 1</span> <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta</span><br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 2</span> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem ad obcaecati!
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta</span><br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 3</span> <br>
+                        Lorem ipsum dolor sit amet.
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta</span><br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 4</span> <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos perferendis et natus aliquam, dolorem id quia nesciunt.
                     </li>
                 </ul>
             </section>
-
-            <section id="laboral">
+            
+            <section class="cv_laboral" id="cv_laboral">
                 <h2>Informacio laboral</h2>
                 <ul>
-                    <!-- Sols amb html, podem fer servir el <strong> i el <em> per indicar "negrita" i "italica" -->
-                    <!-- Posem SOLS 1 element de mostra que treurem al afegir el CSS -->
                     <li>
-                        <strong>Titol feina feta DEMO!! </strong>(
-                        <em>Lloc de execucio</em>
-                        , 2000 - 2022)<br>
-                        en un lugar de la Manchaaaaa....
-                    </li>
-
-                    <li>
-                        <span class="list_titol">Titol feina feta </span>(
-                        <span class="list_lloc">Lloc de execucio</span>
-                        <span class="list_any"> , 2000 - 2022</span>)<br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 1</span> <span>(lloc,periode) </span><br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, accusantium.
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta </span>(
-                        <span class="list_lloc">Lloc de execucio</span>
-                        <span class="list_any"> , 2000 - 2022</span>)<br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 2</span> <span>(lloc, periode) </span><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis distinctio sit eveniet repellendus, quos numquam eligendi soluta praesentium repellat nulla a odio animi veritatis quam doloribus earum? Nulla fugiat excepturi dolore assumenda aliquam nisi ut aut minima sequi. Quam neque aspernatur minima ratione eaque tempore excepturi fugiat voluptas sed aut.
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta </span>(
-                        <span class="list_lloc">Lloc de execucio</span>
-                        <span class="list_any"> , 2000 - 2022</span>)<br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 3</span> <span>(lloc, periode) </span><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptate!
                     </li>
                     <li>
-                        <span class="list_titol">Titol feina feta </span>(
-                        <span class="list_lloc">Lloc de execucio</span>
-                        <span class="list_any"> , 2000 - 2022</span>)<br>
-                        <span class="list_descripcio">en un lugar de la Manchaaaaa....</span>
+                        <span>Estudis 4</span> <span>(lloc, periode) </span><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus delectus distinctio nesciunt iste quidem amet vero suscipit? Quidem illo illum exercitationem quis id sed?
                     </li>
                 </ul>
             </section>
+
         </main>
 
         <footer>
-            <div>
-                <!-- afegim un width per controlar el desmadre del tamany .....-->
-                <a href="#"><img src="media/icones/5282551_tweet_twitter_twitter logo_icon.svg" alt="logo Twitter" width="50px"></a>
-                <a href="#"><img src="media/icones/5282542_linkedin_network_social network_linkedin logo_icon.svg" alt="logo LinkIn" width="50px"></a>
-                <a href="#"><img src="media/icones/5282544_camera_instagram_social media_social network_instagram logo_icon.svg" alt="logo instagram" width="50px"></a>
-            </div>
+            <!-- aqui posem el codi que tenim del FOOTER -->
         </footer>
     </div>
 </body>

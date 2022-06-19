@@ -1,0 +1,122 @@
+/* reset */
+*{margin:0px; padding:0px}
+section{padding:2rem 0}
+
+/* **** AREA DEL TITOL *** */
+section.titol{
+    position:relative;
+    /* resetegem paddings pq centri correctament*/
+    padding:0px;
+}
+section.titol img{
+    position:relative;
+    z-index: 0;
+    width: 100%;
+    max-height: 10rem;
+}
+section.titol h1{
+    /* area del titol de la pagina, nooo de la web */
+    /* definirem une aspectes extres de manera que el text quedi sempre destacat del fons */
+    color:white;
+    border-radius: 0 1rem 0 1rem;
+    border: green solid 5px;
+    background-color: green;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+
+    /* netegem els margins pq cuadri be */
+    margin:0px;
+    /* definim com a postion:absolute i el centrem, amb top, left i transform; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* la posem a SOBRE de la imatge amb z-index */
+    z-index: 1;
+}
+
+h2{text-align: center;}
+
+/* definim algunes cosetes de les sections de aquesta fulla */
+/* amb aixo, fem que les sections PARS tinguin un color gris */
+section:nth-child(2n+1){background-color: lightgrey;}
+
+/* SECTION NAV */
+section.cv_nav ul {
+    /* eliminem les boletes */
+    list-style-type: none;
+    /* la configurem coma flex i posem les coses br */
+    display:flex;
+    justify-content: center;
+    /* el sepraem una mica del h2 ... */
+    margin-top:1.5rem;
+}
+
+section.cv_nav li{
+    /* ho configurem com a flex per centrar la imtge i el text */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.75rem;
+}
+
+section.cv_nav ul li img{height: 1rem; margin-right: 0.25rem}
+
+/* SECTION PERSONAL */
+
+section.cv_personal div p span {font-weight: bold;}
+
+section.cv_personal>div {
+    /* el definim com a flex container per poder ordenar els 2 elements */
+    display:flex;
+    gap:5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+section.cv_personal div img {height: 10rem;}
+
+/* SECTION IDIOMES */
+table{
+    width: 50%;
+    /* pq no creix fin al infinit ... i mes enlla!!! */
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+table caption {color:blue; margin-bottom: 1rem;}
+table,th,td {
+    border: 1px solid green;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+}
+
+/* SECTION ESTUDIS */
+
+section.cv_estudis ul {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+section.cv_estudis ul li {padding: 0.5rem 0rem;}
+section.cv_estudis ul li>span{font-weight:bold;}
+
+
+/* SECTION LABORAL */ 
+section.cv_laboral ul {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+
+section.cv_laboral ul li {padding: 0.5rem 0rem;}
+section.cv_laboral ul li>span:first-child{font-weight:bold;}
+section.cv_laboral ul li>span:nth-child(2){font-style: italic;}
+
+
+

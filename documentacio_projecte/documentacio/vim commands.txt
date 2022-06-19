@@ -1,0 +1,11 @@
+Sortir
+
+ESC -> 
+
+    :w -> Save changes
+    :q -> Exit
+    :q! -> exit and dicard changes
+    :wq -> save changes and exit
+
+    To save a file in Vim and exit, press Esc > Shift + ZZ
+    To exit Vim without saving, press Esc > Shift + ZX

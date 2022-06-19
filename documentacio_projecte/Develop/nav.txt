@@ -1,0 +1,90 @@
+El nav el podem fer com una llista de enllaços o be directament sense llista,
+semanticament crec que seria mes correcte com una llista, pero podem simplificar
+la estructura ....
+
+Al repositori es pot trobar la versio amb float, i amb flex
+
+En un primer moment hem dividit  el nav en dos blocks per tal de poder organitzar
+la posicio, pero al final, em descobert la propietat margin-right:auto del flex i
+ho podem fer sense dos blocks
+
+NOTA: NO represento les tags de tancament.
+
+NOTA: Recordem que dintre les tags "ol/ul" SOLS podem posar "li", 
+i dintre de les "li"  ... el que volguem.
+
+Em començat amb:
+	ul
+		li -> a logo(img)
+
+		li
+			ul
+				li -> a inici
+				li -> a cv
+				li -> a contacte
+
+
+I acabarem amb una molt mes simple
+	div	
+		a logo (img)
+		a inici
+		a cv
+		a contacte
+
+
+
+CODI ****************************************
+HMTL ****************************************
+
+<header>
+	<nav class="siteNav">
+		<a href="#"> <img src="media/imatge/icones/home.svg" alt=""> </a>
+		<a href="index.hrml"> Inici </a>
+		<a href="cv.html"> CV </a>
+		<a href="contacte.html"> Contacte </a>
+	</nav>
+</header>
+
+CODI ****************************************
+CSS3 ****************************************
+
+nav.siteNav {
+	/* Definim el color de fons, el alt i el ample */
+	width: 100%;
+	height: 0.75 rem;
+	background-color: black;
+	/* El posem com a flex-container, i definim les seves propietats */
+	/* aixi els items del flex son directament, els <a> */
+	display:flex;
+	/* justifiquem en alçada, que es la aliniacio en el 2 eix .... */
+	 align-items: center; 
+}
+
+nav.siteNav a {
+	/* Eliminem el subratllat i els posem de color quasi blanc */
+	color: white;
+	text-decoration:none;
+    padding: 0 0.5rem;
+    border: green 2px solid;
+}
+
+nav.siteNav a:first-child {
+	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
+	margin-right: auto;
+    /* i el pintem del color gris que ens demanen tambe */
+    background-color:grey
+}
+
+nav.siteNav a:last-child {
+    /* com ens demanen que el ultim no tingui separacio amb el marge */
+    padding-right:0;
+}
+
+nav.siteNav a img {
+	/* el definim com a block per poder controlar alt i ample; */
+    width: 25px;
+	/* li posem el color de fons i el de la icona */
+	color:white;
+}
+
+NOTA: Recordar de omplir els "alt" de els imatges i de asignar-li el height pq el goolge les indexi millor

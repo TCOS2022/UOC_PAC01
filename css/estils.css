@@ -75,24 +75,25 @@ footer.siteFooter {
     display:flex;
     /* jsutifiquem els eus items al mig ... */
     justify-content: center;
-    }
+}
     
-    .siteFooter a {
+.siteFooter a {
         /* de fet, no caldria pero li podem donar una mica de padding per separar-los */
-    }
+}
     
-    .siteFooter a img {
-        /* definim les mides de la imatge SVG ... */
-        height: 3rem;
-        /* li donem color de fons que es veura pq te transprencies */
-        background-color:white;
-    }
+.siteFooter a img {
+    /* definim les mides de la imatge SVG ... */
+    height: 3rem;
+    /* li donem color de fons que es veura pq te transprencies */
+    background-color:white;
+}
 
 /* SECTION TITOL */
 section.titol{
     position:relative;
     /* resetegem paddings pq centri correctament*/
     padding:0px;
+    margin-top:0px;
 }
 section.titol img{
     position:relative;

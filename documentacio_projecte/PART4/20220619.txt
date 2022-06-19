@@ -1,0 +1,26 @@
+Hola Aleix i Lluis.
+
+He reorganitzat el meu caotic repositori i  he posat la versio final actual a la branca DEV.
+
+Us adjunto tambe 3 captures de pantalla del navegador de les tres pagines.
+
+Al repositori hi han diferents branques amb les diferents maneres que he anat provant. El repo es public.
+
+No he tingut temps de ficarme gaire amb el figma encara .... ho anire fent mentre reconvertim la web a alguna cosa una mica mes fluida aquesta setmana
+Ara es ... uhm ... fluida .... i es mante mes o menys presentable si no la estires o rebregues massa.
+
+He tingut problemes amb el flex al intentar asignar amples fixos, per exemple en la pagina index a la presentacio, pero crec que son problemes de la cache del navegador principalement.
+
+La resta, mes o menys, la he pogut anar acabant. Si qeu em falta canviar els colors de blanc/negre a una cosa menys extrema, ho vull fer amb variables css ... pero encara no ho he acabta de posar.
+
+Jo he afegit un div general a tot el contingut, per si mes endevant cal a la hora de mantenir el aspecte al estirar la finestra.
+
+Sobre l us de selectors ... be, he fet servir tant selectors de clase com en cascada, i si, ja se que molts son algo redundants, a mi em serveix per situar mes facilment a que culleres apunto, tot i qeu tinc clar que es podria fer amb mol menys.
+
+Uf si, els margings i paddings per defecte m han donat molts maldecaps a la hora de aconseguir centrats o posicionaments correctes i al final he optat per eliminarlos amb un reset al principi del css, pensava que amb el normalize en tindria prou, pero no.
+
+He compartit el meu codi amb un parell de alumnes qeu he vist que aneven una mica atabalats, no es que sigui una meravella de codi precisament, espero qeu no sigui cap problema. 
+
+Gracies!
+
+Jordi

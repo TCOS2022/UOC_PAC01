@@ -1,0 +1,219 @@
+/* ARXIU CSS GENERAL PER TOTES LES FULLES */
+
+
+/* ************************************************************************** */
+/* CONFIGS BASIQUES */
+/* ************************************************************************** */
+/* RESET BASIC */
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+
+/* ************************************************************************** */
+/* CONFIGS COMUNS */
+/* ************************************************************************** */
+/* VARIABLES CSS */
+
+
+/* generiques a tota la web */
+h2{text-align: center; padding: 1rem;}
+
+section{width: 100%; margin:1rem auto}
+
+/* NAV */
+nav.siteNav {
+	/* Definim el color de fons, el alt i el ample */
+	width: 100%;
+	height: 0.75 rem;
+	background-color: black;
+	/* El posem com a flex-container, i definim les seves propietats */
+	/* aixi els items del flex son directament, els <a> */
+	display:flex;
+	/* justifiquem en alçada, que es la aliniacio en el 2 eix .... */
+	 align-items: center; 
+}
+
+nav.siteNav a {
+	/* Eliminem el subratllat i els posem de color quasi blanc */
+	color: white;
+	text-decoration:none;
+    padding: 0 0.5rem;
+    /*border: green 2px solid;*/
+}
+
+nav.siteNav a:first-child {
+	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
+	margin-right: auto;
+    /* i el pintem del color gris que ens demanen tambe */
+    background-color:grey
+}
+
+nav.siteNav a:last-child {
+    /* com ens demanen que el ultim no tingui separacio amb el marge */
+    padding-right:0;
+}
+
+nav.siteNav a img {
+	/* el definim com a block per poder controlar alt i ample; */
+    width: 25px;
+	/* li posem el color de fons i el de la icona */
+	color:white;
+}
+
+/* FOOTER */
+footer.siteFooter {
+    /* definim prietats del footer basiques: */
+    width: 100%;
+    background-color: black;
+    /* el definim com a flex container per organitzar els seus items */
+    display:flex;
+    /* jsutifiquem els eus items al mig ... */
+    justify-content: center;
+    }
+    
+    .siteFooter a {
+        /* de fet, no caldria pero li podem donar una mica de padding per separar-los */
+    }
+    
+    .siteFooter a img {
+        /* definim les mides de la imatge SVG ... */
+        height: 3rem;
+        /* li donem color de fons que es veura pq te transprencies */
+        background-color:white;
+    }
+
+/* SECTION TITOL */
+section.titol{
+    position:relative;
+    /* resetegem paddings pq centri correctament*/
+    padding:0px;
+}
+section.titol img{
+    position:relative;
+    z-index: 0;
+    width: 100%;
+    max-height: 10rem;
+}
+section.titol h1{
+    /* area del titol de la pagina, nooo de la web */
+    /* definirem une aspectes extres de manera que el text quedi sempre destacat del fons */
+    color:white;
+    border-radius: 0 1rem 0 1rem;
+    /*border: green solid 5px;*/
+    background-color: green;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+
+    /* netegem els margins pq cuadri be */
+    margin:0px;
+    /* definim com a postion:absolute i el centrem, amb top, left i transform; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* la posem a SOBRE de la imatge amb z-index */
+    z-index: 1;
+}
+/* ************************************************************************** */
+/* CONFIHS ESPECIFIQUES */
+/* ************************************************************************** */
+/* PAGINA INDEX */
+/* SECTION PRESENTACIO */
+section.inici_presentacio>div {
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    /*justify-content:space-around;*/
+    /* gap:5%;*/
+    /*border:5px dotted blue;*/
+    position:relative;
+    margin: 1rem auto;
+}
+
+/* i aqui tenim els flex-items */
+section.inici_presentacio>div>div:first-child {
+    /*border: 2px solid green;*/
+    width: 66%;
+    /*background-color:yellow;*/
+    padding: 0 1rem
+}
+
+section.inici_presentacio>div>div:last-child {
+    /*border: 2px solid blue;*/
+    position:relative;
+    width: 33%;
+    margin-left:1rem;
+}
+
+section.inici_presentacio>div>div p {text-align: justify;}
+section.inici_presentacio img{width: 100%;}
+
+/* SECTION INICI_PROJECTES */
+section.inici_projectes>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        /*justify-content:space-around;*/
+        gap:2.5%;
+        /*border:5px dotted blue;*/
+        position:relative;
+        margin: 1rem auto;
+}
+
+section.inici_projectes article {outline: auto;}
+
+section.inici_projectes article img {width: 100%;}
+section.inici_projectes article p {padding: 1rem; text-align: justify;}
+section.inici_projectes article button {display:block;padding: 2rem auto; margin:1rem auto;} 
+
+/* SECTION INICI_EXPERIENCIA */
+section.inici_experiencia{background-color: black;padding:2rem}
+section.inici_experiencia h2{color:white}
+section.inici_experiencia>div{
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:space-around;
+    gap:2.5%;
+    /*border:5px dotted blue;*/
+    position:relative;
+    margin: 1rem auto;
+}
+
+section.inici_experiencia img{width: 15%;}
+
+
+/* SECTION INICI_AFICIONS */
+section.inici_aficions>div{
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:space-around;
+    gap:2.5%;
+    /*border:5px dotted blue;*/
+    position:relative;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+}
+
+section.inici_aficions div.flex-item{
+    width: 30%;
+    /*border: dotted green 2px;*/
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom:1rem;
+    /* i per aliniar la icona i el text .... */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+section.inici_aficions div.flex-item img{height: 1rem; padding: 0 1rem}
+
+/* PAGINA CV */
+/* PAGINA CONTACTE */

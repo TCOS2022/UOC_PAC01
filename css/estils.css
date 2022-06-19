@@ -19,7 +19,10 @@
 /* CONFIGS COMUNS */
 /* ************************************************************************** */
 /* VARIABLES CSS */
-
+:root {
+    --main-bg-color: #222222;
+    --main-fg-color: #F5F5F5;
+  }
 
 /* GENERIQUES EN TOTA LA WEB */
 h2{text-align: center; padding: 1rem;}
@@ -31,7 +34,7 @@ nav.siteNav {
 	/* Definim el color de fons, el alt i el ample */
 	width: 100%;
 	height: 0.75 rem;
-	background-color: black;
+	background-color: var(--main-bg-color);
 	/* El posem com a flex-container, i definim les seves propietats */
 	/* aixi els items del flex son directament, els <a> */
 	display:flex;
@@ -41,7 +44,7 @@ nav.siteNav {
 
 nav.siteNav a {
 	/* Eliminem el subratllat i els posem de color quasi blanc */
-	color: white;
+	color: var(--main-fg-color);
 	text-decoration:none;
     padding: 0 0.5rem;
     /*border: green 2px solid;*/
@@ -51,7 +54,7 @@ nav.siteNav a:first-child {
 	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
 	margin-right: auto;
     /* i el pintem del color gris que ens demanen tambe */
-    background-color:grey
+    background-color:grey;
 }
 
 nav.siteNav a:last-child {
@@ -63,14 +66,14 @@ nav.siteNav a img {
 	/* el definim com a block per poder controlar alt i ample; */
     width: 25px;
 	/* li posem el color de fons i el de la icona */
-	color:white;
+	color:var(--main-fg-color);
 }
 
 /* FOOTER */
 footer.siteFooter {
     /* definim prietats del footer basiques: */
     width: 100%;
-    background-color: black;
+    background-color: var(--main-bg-color);
     /* el definim com a flex container per organitzar els seus items */
     display:flex;
     /* jsutifiquem els eus items al mig ... */
@@ -85,7 +88,7 @@ footer.siteFooter {
     /* definim les mides de la imatge SVG ... */
     height: 3rem;
     /* li donem color de fons que es veura pq te transprencies */
-    background-color:white;
+    background-color:var(--main-fg-color);
 }
 
 /* SECTION TITOL */
@@ -104,7 +107,7 @@ section.titol img{
 section.titol h1{
     /* area del titol de la pagina, nooo de la web */
     /* definirem une aspectes extres de manera que el text quedi sempre destacat del fons */
-    color:white;
+    color:var(--main-fg-color);
     border-radius: 0 1rem 0 1rem;
     /*border: green solid 5px;*/
     background-color: green;
@@ -175,7 +178,7 @@ section.inici_projectes article button {display:block;padding: 2rem auto; margin
 
 /* SECTION INICI_EXPERIENCIA */
 section.inici_experiencia{background-color: black;padding:2rem}
-section.inici_experiencia h2{color:white}
+section.inici_experiencia h2{color:var(--main-fg-color)}
 section.inici_experiencia>div{
     /* aquest dov es el flex-container */
     width: 90%;

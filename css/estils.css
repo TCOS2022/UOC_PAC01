@@ -1,5 +1,7 @@
 /* ARXIU CSS GENERAL PER TOTES LES FULLES */
 
+/* NOTES: hi han moltes linies de border desactivades que son per test */
+/* NOTES: Em fet servir ancles tant  de clases com de cascada */
 
 /* ************************************************************************** */
 /* CONFIGS BASIQUES */
@@ -19,7 +21,7 @@
 /* VARIABLES CSS */
 
 
-/* generiques a tota la web */
+/* GENERIQUES EN TOTA LA WEB */
 h2{text-align: center; padding: 1rem;}
 
 section{width: 100%; margin:1rem auto}

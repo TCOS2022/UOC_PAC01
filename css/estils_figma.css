@@ -13,29 +13,89 @@
     box-sizing: border-box;
 }
 
+/* IMPORTACIO DE FONTS DE GOOGLE FONTS */
+/* NOTA: Ho podem posar al HTML com a link o be aqui ... aqui es mes curt */
+
+/* Google Font: Inter 400/600 */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
+
+/* Google Font: Montserrat 400/600 */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'); */
+
 
 
 /* ************************************************************************** */
 /* CONFIGS COMUNS */
 /* ************************************************************************** */
+
 /* VARIABLES CSS */
 :root {
+    /* Definim variables de colors */
     --main-bg-color: #222222;
     --main-fg-color: #F5F5F5;
+    /* Definim variables de fonts */
+    --titlePage: Montserrat;
+    --titleSection: Inter;
+    --mainFont: Inter;
   }
 
 /* GENERIQUES EN TOTA LA WEB */
-.mainContainer{width: 1440px; height: 2885px;}
+html{
+    /* definim la font i estils "per defecte" i la base pels REM.. */
+    font-size: 16px;
+    font-family: var(--mainFont);
+    font-weight: 400;
+    font-style: normal;
+}
 
-h2{text-align: center; padding: 1rem;}
+/* tenim un div posat en paralel amb la plantilla original */
+.plantilla_figma{
+    height: 2884px;
+    float:right;
+    border: 5px blue solid;
+    margin:0px;
+    padding:0px;
+}
 
-section{width: 100%; margin:1rem auto}
+
+.mainContainer{
+    width: 1440px; 
+    height: 2885px; 
+    border:solid red 5px;
+    /*background-color: blueviolet;*/
+}
+
+h2{
+    /* Aixo es el titol de totes les sections a dintre del main */
+    /* Intento definir una config comu a totes les sections que inclogui */
+    /* font-type, font-size, font-weight, margin s i aliniaicio centrada */
+
+    /* Afegim la font que volem i una de "respaldo" per si falla la primera */
+    font-family: var(--titleSection), arial;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    
+    text-align: center; 
+    padding: 4rem;  
+}
+
+section{
+    width: 100%; 
+    margin:0;
+    padding:0;
+    background-color: #F5F5F5;
+}
+
+header, main, footer {width: 100%;}
 
 /* NAV */
 nav.siteNav {
 	/* Definim el color de fons, el alt i el ample */
 	width: 100%;
 	height: 0.75 rem;
+    /* segons esquema son 64px */
+    height: 64px;
 	background-color: var(--main-bg-color);
 	/* El posem com a flex-container, i definim les seves propietats */
 	/* aixi els items del flex son directament, els <a> */
@@ -56,17 +116,20 @@ nav.siteNav a:first-child {
 	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
 	margin-right: auto;
     /* i el pintem del color gris que ens demanen tambe */
-    background-color:grey;
+    background-color:var(--main-bg-color);
 }
 
 nav.siteNav a:last-child {
     /* com ens demanen que el ultim no tingui separacio amb el marge */
     padding-right:0;
+    /* pero al figma si qeu tenim margin .... */
+    padding-right: 1rem;
 }
 
 nav.siteNav a img {
 	/* el definim com a block per poder controlar alt i ample; */
-    width: 25px;
+    /* li posem el witdh donat al figma .... */
+    width: 40px;
 	/* li posem el color de fons i el de la icona */
 	color:var(--main-fg-color);
 }
@@ -75,22 +138,30 @@ nav.siteNav a img {
 footer.siteFooter {
     /* definim prietats del footer basiques: */
     width: 100%;
-    background-color: black;
+    background-color: var(--main-bg-color);
     /* el definim com a flex container per organitzar els seus items */
     display:flex;
     /* jsutifiquem els eus items al mig ... */
     justify-content: center;
+    /* Afegim per posar-ho com a figma */
+    gap: 48px;
+    height: 128px;
+    align-items: center;
 }
     
 .siteFooter a {
+        /* aixo son el flex-items ..... */ 
         /* de fet, no caldria pero li podem donar una mica de padding per separar-los */
 }
     
 .siteFooter a img {
     /* definim les mides de la imatge SVG ... */
-    height: 3rem;
+    /* segons figma son 36px ... */
+    height: 36px;
+    padding:0; margin:0;
+
     /* li donem color de fons que es veura pq te transprencies */
-    background-color:var(--main-fg-color);
+    /*background-color:var(--main-fg-color);*/
 }
 
 /* SECTION TITOL */
@@ -104,17 +175,17 @@ section.titol img{
     position:relative;
     z-index: 0;
     width: 100%;
-    max-height: 300px;
+    height: 300px;
 }
 
 section.titol h1{
     /* area del titol de la pagina, nooo de la web */
     /* definirem une aspectes extres de manera que el text quedi sempre destacat del fons */
     color:var(--main-fg-color);
-    border-radius: 0 1rem 0 1rem;
+    border-radius: 0 2rem 0 2rem;
     /*border: green solid 5px;*/
     background-color: green;
-    padding: 0.25rem 0.5rem;
+    padding: 1rem 2rem;
     text-align: center;
 
     /* netegem els margins pq cuadri be */
@@ -126,7 +197,18 @@ section.titol h1{
     transform: translate(-50%,-50%);
     /* la posem a SOBRE de la imatge amb z-index */
     z-index: 1;
+    
+    /* i una mica de ombra */
+    /*text-shadow:1rem 1rem 2rem #000000;*/
+
+    /* alguns canvis per adaptar-nos al disseny figma: */
+    font-family: var(--titlePage);
+    font-size: 40px;
+    color: #FFFFFF;
+    
 }
+
+
 /* ************************************************************************** */
 /* CONFIHS ESPECIFIQUES */
 /* ************************************************************************** */
@@ -141,6 +223,7 @@ section.inici_presentacio>div {
     /*border:5px dotted blue;*/
     position:relative;
     margin: 1rem auto;
+    gap:2rem;
 }
 
 /* i aqui tenim els flex-items */
@@ -148,7 +231,7 @@ section.inici_presentacio>div>div:first-child {
     /*border: 2px solid green;*/
     width: 66%;
     /*background-color:yellow;*/
-    padding: 0 1rem
+    padding: 0 1rem;
 }
 
 section.inici_presentacio>div>div:last-child {

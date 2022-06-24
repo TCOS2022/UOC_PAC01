@@ -1,0 +1,33 @@
+20220624
+
+Vale, em intentat acostar-nos el amxim posible a un diseny estatic en base al esquema proposat al Figma.
+
+Cosetes que em canviat:
+
+SECTIONS 
+
+Em intentat que totes les sections siguin iguals amb un format:
+    <section>
+        <h2>
+        <div> <-- contenidor flex
+    </section>
+
+em tingut que afegir espai com a padding a la aprt inferior per fer que fossin
+mes semblants a les del dibuix
+
+TITOL:
+Aqui em afegit expressament el color blanc i el background verd, ja que al tenir
+imatges aleatories... el titol desapareix si els fons es prou fosc
+
+SECCIO PROJECTES 
+No se pq pero sembla que la imatge queda separada del marge esquerre.
+
+SECCIO EXPERIENCIA 
+He fet servir els svg amb el titol integrat
+
+SECCIO AFICIONS 
+Tot iq eu al figma surten uns valors, els he tingut que ajsutar basntat a ma pq sembles el disseny inicial
+
+FOOTER 
+Aqui me he trobat que tot i que he fet servir les icones del Figma, he tingut que ferles MOLT mes grans
+que la mida proposada pq quedin aprentment iguals al navegador

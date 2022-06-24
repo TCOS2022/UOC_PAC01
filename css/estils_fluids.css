@@ -1,0 +1,63 @@
+/* 
+    val farem 4 mediaqueries en els punts de tall proposats i la resta sera
+    un diseny el mes fluid posible, per tant com farem servir unitats percentuals
+    el disseny no sera tant semblant al proposat al Figma
+*/
+
+/* 
+    Punts de tall recomenats per les mediaqueries: 
+             600px (mòbil)
+             768px (tauleta vertical)
+             992px (tauleta horitzontal)
+            1200px (escriptori)
+
+    Format media-queries: 
+        @media only screen and (max-width: 768px) {}
+
+    Nota: podem fer servir max-width  (fins a) i min-width (a partir de).
+*/
+/* ********** DEFINIM PARTS COMUNS A LES MEDIA *********** */
+/* Definim variables CSS */
+:root{}
+
+/* Definim RESETS */
+* {margin:0px; padding:0px; box-sizing: border-box;}
+
+
+/* ********** DEFINIM PARTS DIFERENTS A LES MEDIA *********** */
+/* Disseny petit (menys de 600px) */
+@media only screen and (max-width: 600px){
+    body{
+        background-color:lawngreen;
+    }
+
+    .mainContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Disseny entremig (mes de 600 i menys de 992) */
+@media only screen and (min-width: 601px) and (max-width:992px){
+    body{
+        background-color:orchid;
+    }
+
+    .mainContainer{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Disseny gran (mes de 992) */
+@media only screen and (min-width: 993px){
+    body{
+        background-color:yellow;
+    }
+
+    .mainContainer{
+        /* definim fins a on pot creixer */
+        max-width: 1440px;
+        /* el centrem a la pantalla */
+        margin:0 auto;
+    }

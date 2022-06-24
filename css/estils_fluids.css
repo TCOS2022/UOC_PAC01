@@ -68,7 +68,7 @@ body{
     display: flex;
     justify-content: left;
     /* Aliniacio VERTICAL */
-    align-items: lcenter;
+    align-items: center;
     background-color: var(--first-bg-color);
 }
 
@@ -96,7 +96,50 @@ body{
 /* Definim la estructura pel MAIN */
 /* Definirem les SECTION del MAIN com a */
 /* h2 - div(flex-container) */
+main>section{
+    /* aqeui definim com seran els contenidors section */
+    position: relative;
+}
 
+.titol{
+    /* seccio que inclou el titol de CADA PAGINA */
+    width: 5trm;
+}
+
+.titol>h1{
+    /* canviem font i cosetes .... */
+    font-family: Montserrat;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+    /* Com tenim una imatge de fons aleatoria, le afegirem un border i background */
+    border-radius: .5rem;
+    background-color: green;
+    color:white;
+    padding: 1rem;
+    /* el posicionament el fem amb: */
+    /* NOTA: estem centrnat el vertex superior esquerre a sobre de la imatge*/
+    margin:0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* per centrar la imatge respecte del seu vertex: */
+    transform: translate(-50%,-50%);
+    /* i pq quedi per sobre: */
+    z-index: 2;
+}
+
+.titol>img{
+    width: 100%;
+    z-index: 1;
+    max-height: 300px;
+}
+
+
+
+/* *************************************** */
+/* ********** MAIN PERSONALITZATS ******** */
+/* *************************************** */
 
 /* *************** FOOTER ****************** */
 /* Definim la estructura pel FOOTER */
@@ -110,11 +153,12 @@ body{
 
 /* Disseny petit (menys de 600px) */
 @media only screen and (max-width: 600px){
+
+    /* DEFAULT CONFIGS */
     body{
         background-color:lawngreen;
     }
-
-    .mainContainer{
+        .mainContainer{
         /* canviarem a full with i fem servir vw i no % */
         width: 100vw;
         /* centrem els elements */
@@ -123,6 +167,7 @@ body{
         font-size: 24px;
     }
 
+    /* HEADER i NAV */
     .siteNav{
         /* Funcionara com un flex-container, per tant .... */
         display: flex;
@@ -141,6 +186,11 @@ body{
         /* si posem 1.5em fa servir de base la heredada?, noooo la de root */
         font-size: 1em;
     }
+
+    /* MAIN */
+    .titol h1{
+        font-size: 1.5em; color: blue;text-transform: capitalize;}
+    /* FOOTER */
 
 }
 

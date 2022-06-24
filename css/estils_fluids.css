@@ -16,15 +16,98 @@
 
     Nota: podem fer servir max-width  (fins a) i min-width (a partir de).
 */
+
+/* ******************************************************* */
+/* ******************************************************* */
 /* ********** DEFINIM PARTS COMUNS A LES MEDIA *********** */
+/* ******************************************************* */
+/* ******************************************************* */
+
 /* Definim variables CSS */
-:root{}
+:root{
+    /* Definim variables de colors */
+    --first-bg-color: #222222;
+    --first-fg-color: #F5F5F5;
+
+    /* Definim variables de fonts */
+    --mainFont: Inter;
+    --secondaryFont:Montserrat;
+  }
 
 /* Definim RESETS */
-* {margin:0px; padding:0px; box-sizing: border-box;}
+*{margin:0px; padding:0px; box-sizing: border-box;}
+
+/* Definim FONTS */
+/* els rem fan servir la unitat del body com a base */
+/* els em  fan servir la unitat heredada del pare */
+body{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Definim el mainContainer */
+.mainContainer{
+    position:relative;
+    width: 90%;
+    /* pq es vegi per on va */
+    border:5px solid red;
+    /* per centrar-lo al contenidor pare */
+    margin: 0 auto;
+
+}
+
+/* ***************************************** */
+/* *************** HEADER ****************** */
+/* ***************************************** */
+/* Definim la estructura pel HEADER */
+/*NOTA: El header no te titol, sols te la part del NAV */
+
+.siteNav{
+    /* Funcionara com un flex-container, per tant .... */
+    display: flex;
+    justify-content: left;
+    /* Aliniacio VERTICAL */
+    align-items: lcenter;
+    background-color: var(--first-bg-color);
+}
+
+.siteNav a {
+    /* per tots els flex-items */
+    padding: 1rem;
+    color:var(--first-fg-color);
+}
+
+.siteNav a:first-child{
+    /* sols el primer item .... */
+    /* posem tot el espai disponible a la seva dreta */
+    margin-right: auto;
+}
+
+.siteNav a:first-child img {
+    /* recordem que les svg EXIGEIXEN un w/h per visualitzar-se */
+    height: 2rem;
+}
 
 
-/* ********** DEFINIM PARTS DIFERENTS A LES MEDIA *********** */
+/* *************************************** */
+/* *************** MAIN ****************** */
+/* *************************************** */
+/* Definim la estructura pel MAIN */
+/* Definirem les SECTION del MAIN com a */
+/* h2 - div(flex-container) */
+
+
+/* *************** FOOTER ****************** */
+/* Definim la estructura pel FOOTER */
+
+
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********** DEFINIM PARTS CANVIADES A LES MEDIA *********** */
+/* ********************************************************** */ 
+/* ********************************************************** */
+
 /* Disseny petit (menys de 600px) */
 @media only screen and (max-width: 600px){
     body{
@@ -32,9 +115,33 @@
     }
 
     .mainContainer{
-        width: 90%;
+        /* canviarem a full with i fem servir vw i no % */
+        width: 100vw;
+        /* centrem els elements */
         margin: 0 auto;
+        /* fem la lletra mes grossa */
+        font-size: 24px;
     }
+
+    .siteNav{
+        /* Funcionara com un flex-container, per tant .... */
+        display: flex;
+        /* posem els elements en columna */
+        flex-direction: column;
+    }
+
+    .siteNav a{
+        /* aixo son els flex-items */
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bolder;
+        font-style: italic;
+        /* si posem 1.5em fa servir de base la heredada?, noooo la de root */
+        font-size: 1em;
+    }
+
 }
 
 /* Disseny entremig (mes de 600 i menys de 992) */

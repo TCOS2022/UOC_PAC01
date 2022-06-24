@@ -77,7 +77,8 @@ h2{
     font-style: normal;
     
     text-align: center; 
-    padding: 4rem;  
+    padding: 4rem; 
+    margin-top:1rem; 
 }
 
 section{
@@ -216,57 +217,73 @@ section.titol h1{
 /* SECTION PRESENTACIO */
 section.inici_presentacio>div {
     /* aquest dov es el flex-container */
-    width: 90%;
+    width: 100%;
     display:flex;
-    /*justify-content:space-around;*/
-    /* gap:5%;*/
+    justify-content:space-between;
     /*border:5px dotted blue;*/
     position:relative;
-    margin: 1rem auto;
-    gap:2rem;
+    padding: 0 48px;
+    gap:48px;
 }
 
 /* i aqui tenim els flex-items */
 section.inici_presentacio>div>div:first-child {
     /*border: 2px solid green;*/
-    width: 66%;
+    width: 845px;
     /*background-color:yellow;*/
-    padding: 0 1rem;
 }
 
 section.inici_presentacio>div>div:last-child {
-    /*border: 2px solid blue;*/
+    border: 2px solid blue;
     position:relative;
-    width: 33%;
-    margin-left:1rem;
+    width: 400px;
 }
 
-section.inici_presentacio>div>div p {text-align: justify;}
+section.inici_presentacio>div>div p {text-align: left}
 section.inici_presentacio img{width: 100%;}
 
 /* SECTION INICI_PROJECTES */
+section.inici_projectes{margin-bottom:75px;}
+
 section.inici_projectes>div{
-        /* aquest dov es el flex-container */
+        /* aquest div es el flex-container */
         width: 90%;
         display:flex;
-        /*justify-content:space-around;*/
-        gap:2.5%;
+        justify-content:center;
+        gap:48px;
         /*border:5px dotted blue;*/
         position:relative;
-        margin: 1rem auto;
+        margin: 0 auto;
 }
 
-section.inici_projectes article {outline: auto;}
+section.inici_projectes article {
+    /* aquest element es el flex-item */
+    border: solid 5px #777777;
+    width:340px;
+    /* segons figma son 6, pqeo pq es vegi semblant ha de ser molt mes */
+    border-radius: 6px;
+    border-radius:24px;
+    /* pq la imatge es quedi a dintre del radi curvat */
+    overflow: hidden;
+}
 
-section.inici_projectes article img {width: 100%;}
-section.inici_projectes article p {padding: 1rem; text-align: justify;}
-section.inici_projectes article button {display:block;padding: 2rem auto; margin:1rem auto;} 
+section.inici_projectes article img {width:100%;height:200px}
+section.inici_projectes article p {padding: 26px; text-align: justify;}
+section.inici_projectes article button {
+    width:240px;
+    display:block;
+    padding:1rem auto; 
+    margin:1rem auto;
+    height:3rem;
+    color:#FFFFFF;
+    background-color: #222222;
+} 
 
 /* SECTION INICI_EXPERIENCIA */
 section.inici_experiencia{background-color: var(--main-bg-color);padding:2rem}
 section.inici_experiencia h2{color:var(--main-fg-color)}
 section.inici_experiencia>div{
-    /* aquest dov es el flex-container */
+    /* aquest div es el flex-container */
     width: 90%;
     display:flex;
     justify-content:space-around;
@@ -276,36 +293,52 @@ section.inici_experiencia>div{
     margin: 1rem auto;
 }
 
-section.inici_experiencia img{width: 15%;}
+section.inici_experiencia img{height: 350px;}
 
 
 /* SECTION INICI_AFICIONS */
+section.inici_aficions{
+    /* li afegim un paffing per omplir la aprt de abaix */
+    padding-bottom: 75px;
+}
 section.inici_aficions>div{
     /* aquest dov es el flex-container */
     width: 90%;
     display:flex;
-    justify-content:space-around;
-    gap:2.5%;
+    justify-content:center;
     /*border:5px dotted blue;*/
     position:relative;
-    margin: 1rem auto;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 section.inici_aficions div.flex-item{
-    width: 30%;
+    width: 340px;
     /*border: dotted green 2px;*/
-    padding: 0.5rem;
+    padding: 24px;
     text-align: center;
-    margin-bottom:1rem;
+
+    /* i el mateix item es un contenidor flex ... */
     /* i per aliniar la icona i el text .... */
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    border-radius: 6px;
+    background-color: #d2d2d2;
+    margin:24px;
 }
 
-section.inici_aficions div.flex-item img{height: 1rem; padding: 0 1rem}
+/* aquest dos son els flex-items interiors .... */
+section.inici_aficions div.flex-item span{
+    font-family: var(--titlePage);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    color:blue;
+}
+section.inici_aficions div.flex-item img{
+    height: 40px; 
+}
 
 /* PAGINA CV */
 /* PAGINA CONTACTE */

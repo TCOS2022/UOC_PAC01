@@ -62,7 +62,6 @@ body{
 /* ***************************************** */
 /* Definim la estructura pel HEADER */
 /*NOTA: El header no te titol, sols te la part del NAV */
-
 .siteNav{
     /* Funcionara com un flex-container, per tant .... */
     display: flex;
@@ -94,18 +93,17 @@ body{
 /* *************** MAIN ****************** */
 /* *************************************** */
 /* Definim la estructura pel MAIN */
-/* Definirem les SECTION del MAIN com a */
-/* h2 - div(flex-container) */
+
 main>section{
     /* aqeui definim com seran els contenidors section */
     position: relative;
 }
 
+/* Section que inclou el titol de cada pagina */
 .titol{
     /* seccio que inclou el titol de CADA PAGINA */
     width: 5trm;
 }
-
 .titol>h1{
     /* canviem font i cosetes .... */
     font-family: Montserrat;
@@ -128,21 +126,224 @@ main>section{
     /* i pq quedi per sobre: */
     z-index: 2;
 }
-
 .titol>img{
     width: 100%;
     z-index: 1;
     max-height: 300px;
 }
 
+/* Definirem la resta de SECTIONS del MAIN amb */
+/* h2 - div(flex-container) */
+h2{
+    /* el h2 es el titol de cada section del main .... */
+    /* definim la posicio */
+    display:block; /* <<== no caldria ja que el 'h' son tots blocks per default */
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    /* definim la font i spaces asociades */
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    /* text shadow generator: https://html-css-js.com/css/generator/text-shadow/ */ 
+    /* text-shadow: h-shadow v-shadow blur-radius color-shadow */
+    text-shadow: 3px 5px 2px #474747;
+    border: dotted 5px blue;
+}
+
+.flex-container{
+    /* els tres sections porten un FLEX-CONTAINER ... */
+    /* definim specs per defecte ... */
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* li donarem una mcia de margins .... */
+    margin:0 2rem;
+}
 
 
 /* *************************************** */
 /* ********** MAIN PERSONALITZATS ******** */
 /* *************************************** */
 
+/* *** PAGINA DE INICI *** */
+/* SECTION INICI_PRESENTACIO */
+.inici_presentacio .flex-container{
+    /* FLEX-CONTAINER */
+    justify-content: space-between;
+}
+.inici_presentacio .flex-container div{
+     /* aixo son els FLEX-ITEMS */
+}
+
+/* SECTION INICI_PROJECTES */
+.inici_projectes .flex-container{
+    /* FLEX-CONTAINER */
+    justify-content: center;
+    gap:1rem;
+}
+.inici_projectes .flex-container article{
+    /* aixo son els FLEX-ITEMS */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inici_projectes .flex-container article img{
+    width: 100%;
+}
+.inici_projectes .flex-container article p{
+    padding: 1rem;
+}
+.inici_projectes .flex-container article button{
+    display:block;
+    width: 75%;
+    padding:1rem;
+    margin:0 auto;
+}
+
+/* SECTION INICI_EXPERIENCIA */
+/* atencio aquesta section porta els colors invertits */
+.inici_experiencia{
+    color:white;
+    background-color: black;
+}
+.inici_experiencia h2{
+    color:white;
+    text-shadow: 3px 5px 2px #BBBBBB;
+}
+.inici_experiencia .flex-container{
+    /* FLEX-CONTAINER */
+    justify-content: center;
+    gap:5rem;
+}
+.inici_experiencia .flex-container img{
+    /* aixo son els FLEX-ITEMS */
+    height: 20rem;
+}
+
+/* SECTION INICI_AFICIONS */
+.inici_aficions .flex-container{
+    /* FLEX-CONTAINER */
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.inici_aficions .flex-container .flex-item {
+    /* FLEX-ITEM */
+    border:solid red 2px;
+    border-radius: 1.5rem 0rem 1.5em 0rem;
+    background-color: grey;
+    padding:1rem 2rem;
+    margin: 0.5rem 0.5rem;
+    /* FLEX-CONTAINER 2 */
+    display:flex;
+    justify-content: space-evenly;
+}
+.inici_aficions .flex-container .flex-item span{
+        /* FLEX-ITEM 2 */
+        font-size: 2.5rem;
+}
+.inici_aficions .flex-container .flex-item img{
+        /* FLEX-ITEM 2 */
+        height: 2.5rem;
+        margin: 0 1rem;
+}
+
+
+
+
+/* *** PAGINA DE CV *** */
+/* SECTION CV_MAV */
+.cv_nav ul{
+    display:flex;
+    justify-content: center;
+}
+.cv_nav ul li{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+.cv_nav ul li img{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.cv_nav ul li a{
+    text-decoration: none;
+}
+
+/* SECTION CV_PERSONAL */
+.cv_personal .flex-container{
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.cv_personal .flex-container img {height: 8rem;}
+
+/* *** PAGINA DE CONTACTE *** */
+/* sols tenim una cosa que controlar, el form */
+.contacteFormulari{}
+
+.contacteFormulari {
+    /* li posem un ample maxim pq no creixi indefinidament .... */
+    width: 75%;
+    max-width: 50rem;
+    /* i el centrem .... */
+    margin: 0 auto;
+}
+
+.contacteFormulari fieldset {
+    /* desactivarem els borders visibles dels fieldsets .... */
+    border:none;
+}
+
+.contacteFormulari label {
+    /* posem els titols en negreta */
+    font-weight: bold;
+}
+
+.contacteFormulari .ample {
+    width: 100%;
+    /* afegim una mica de separacio entre el albel de sobre i el de sota */
+    margin-top:0.5rem;
+    margin-bottom:1rem;
+}
+
+.contacteFormulari input:last-child{
+    /* arreglem qeue stigui tot en una solia linia .... */
+    width: 1rem;
+}
+
+.contacteFormulari button {
+    /* ho centrem i ho posem bonic .... */
+    display: block;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+
+
+/* ***************************************** */
 /* *************** FOOTER ****************** */
+/* ***************************************** */
 /* Definim la estructura pel FOOTER */
+.siteFooter{
+    /* Funcionara com un flex-container, per tant .... */
+    display: flex;
+    justify-content: center;
+    /* Aliniacio VERTICAL */
+    align-items: center;
+    background-color: var(--first-bg-color);
+}
+.siteFooter a {
+    /* per tots els flex-items */
+    padding: 2rem;
+    color:var(--first-fg-color);
+}
+/*.siteFooter a img{height: 1rem;}*/
 
 
 /* ********************************************************** */
@@ -158,13 +359,15 @@ main>section{
     body{
         background-color:lawngreen;
     }
-        .mainContainer{
+
+    .mainContainer{
         /* canviarem a full with i fem servir vw i no % */
         width: 100vw;
         /* centrem els elements */
         margin: 0 auto;
         /* fem la lletra mes grossa */
         font-size: 24px;
+        position:relative;
     }
 
     /* HEADER i NAV */
@@ -172,12 +375,12 @@ main>section{
         /* Funcionara com un flex-container, per tant .... */
         display: flex;
         /* posem els elements en columna */
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .siteNav a{
         /* aixo son els flex-items */
-        width: 100%;
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
@@ -187,12 +390,41 @@ main>section{
         font-size: 1em;
     }
 
+    .siteNav a:first-child{margin-right:0px;}
+
     /* MAIN */
     .titol h1{
-        font-size: 1.5em; color: blue;text-transform: capitalize;}
-    /* FOOTER */
+        font-size: 1.5em; color: blue;text-transform: capitalize;
+    }
 
+    /* PAGINA INDEX */
+    .flex-container{
+        flex-direction: column;
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    /* PAGINA CV */
+    .cv_nav ul{flex-direction: column;}
+    .cv_personal .flex-container{
+        gap: 1rem;
+    }
+    .cv_personal .flex-container img{height: 8em;}
+
+    /* FOOTER */
+    .siteFooter{
+        /* vegem qeu podem canviar .... */
+        justify-content: space-between;
+    }
 }
+
+
+
+
+
+
 
 /* Disseny entremig (mes de 600 i menys de 992) */
 @media only screen and (min-width: 601px) and (max-width:992px){
@@ -210,6 +442,19 @@ main>section{
 @media only screen and (min-width: 993px){
     body{
         background-color:yellow;
+    }
+
+    .mainContainer{
+        /* definim fins a on pot creixer */
+        max-width: 1440px;
+        /* el centrem a la pantalla */
+        margin:0 auto;
+    }
+
+/* Disseny gran (mes de 1440) */
+@media only screen and (min-width: 1441px){
+    body{
+        background-color:lightseagreen;
     }
 
     .mainContainer{

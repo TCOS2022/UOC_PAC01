@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de CV</title>
+    
+    <!-- Afegim arxius CSS, normalize.css per unificar criteris de estils -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- afegim arxius CSS, local a la web -->
+    <!-- <link rel="stylesheet" href="css/estils.css"> -->
+    <!-- afegim arxius CSS especifics -->
+    <link rel="stylesheet" href="css/estils_fluids.css">
+</head>
+
+<body>
+
+    <div class="mainContainer">
+        
+        <header>
+            <!-- aqui posem el codi que tenim del HEADER/NAV -->
+            <nav class="siteNav">
+                <a href="#"> <img src="media/imatge/icones/home.svg" alt="Imatge del Logo"> </a>
+                <a href="index_fluid.html"> Inici </a>
+                <a href="cv_fluid.html"> CV </a>
+                <a href="contacte_fluid.html"> Contacte </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="titol">
+                <h1>Curriculum Vitae</h1>
+                <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
+            </section>
+
+            <section class="cv_nav">
+                <h2>Index</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <img src="media/imatge/icones/contact.svg" alt="DP">
+                            <a href="#cv_dp">Dades personals</a>
+                        </li>
+                        <li>
+                            <img src="media/imatge/icones/lang.svg" alt="I">
+                            <a href="#cv_idiomes">Idiomes</a>
+                        </li>
+                        <li>
+                            <img src="media/imatge/icones/books.svg" alt="E">
+                            <a href="#cv_estudis">Estudis</a>
+                        </li>
+                        <li>
+                            <img src="media/imatge/icones/screen.svg" alt="L">
+                            <a href="#cv_laboral">Laboral</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="cv_personal" id="cv_dp">
+                <h2>Dades personals</h2><br>
+                <div class="flex-container">
+                    <div>
+                        <p><span>Nom:</span>   Tete Cohete</p>
+                        <p><span>Adreça:</span>   Rue del Percebe 13</p>
+                        <p><span>DNI:</span>  00 000 000 X</p>
+                        <p><span>Telefon:</span>   666 666 666</p>
+                        <p><span>Email:</span>  notinc@encaplloc.kk</p>
+                    </div>
+                    <img src="media/imatge/icones/smile.svg" alt="perfil">
+                </div>
+            </section>
+
+            <section class="cv_idiomes" id="cv_idiomes">
+                <h2>Idiomes</h2>
+                <table>
+                    <caption>-- Aixo es la llegenda  -- </caption>
+                    <thead>
+                        <tr>
+                            <th>Llengues</th>
+                            <th colspan="4">Nivells</th> 
+                        </tr>
+                        <tr>
+                            <th>***</th>
+                            <th>Baix</th>
+                            <th>Mitja</th>
+                            <th>Alt</th>
+                            <th>Natiu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Catala</td> <td></td> <td></td> <td></td> <td>*</td>
+                        </tr>
+                        <tr>
+                            <td>Castella</td> <td></td> <td></td> <td></td> <td>*</td>
+                        </tr>
+                        <tr>
+                            <td>Angles</td> <td></td> <td>*</td> <td></td> <td></td>
+                        </tr>
+                        <tr>
+                            <td>Frances</td> <td></td> <td></td> <td>*</td> <td></td>
+                        </tr>
+                        <tr>
+                            <td>Klingon</td> <td>*</td> <td></td> <td></td> <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">-- Aixo es el peu de la taula --</td> 
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section class="cv_estudis" id="cv_estudis">
+                <h2>Informacio academica</h2>
+                <ul class="flex-container">
+                    <li>
+                        <span>Estudis 1</span> <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+                    </li>
+                    <li>
+                        <span>Estudis 2</span> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem ad obcaecati!
+                    </li>
+                    <li>
+                        <span>Estudis 3</span> <br>
+                        Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        <span>Estudis 4</span> <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos perferendis et natus aliquam, dolorem id quia nesciunt.
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="cv_laboral" id="cv_laboral">
+                <h2>Informacio laboral</h2>
+                <ul class="flex-container">
+                    <li>
+                        <span>Estudis 1</span> <span>(lloc, periode) </span><br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, accusantium.
+                    </li>
+                    <li>
+                        <span>Estudis 2</span> <span>(lloc, periode) </span><br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis distinctio sit eveniet repellendus, quos numquam eligendi soluta praesentium repellat nulla a odio animi veritatis quam doloribus earum? Nulla fugiat excepturi dolore assumenda aliquam nisi ut aut minima sequi. Quam neque aspernatur minima ratione eaque tempore excepturi fugiat voluptas sed aut.
+                    </li>
+                    <li>
+                        <span>Estudis 3</span> <span>(lloc, periode) </span><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptate!
+                    </li>
+                    <li>
+                        <span>Estudis 4</span> <span>(lloc, periode) </span><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus delectus distinctio nesciunt iste quidem amet vero suscipit? Quidem illo illum exercitationem quis id sed?
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer class="siteFooter">
+
+            <a href="#"><img src="media/imatge/icones/figma_iconTwitter.svg" alt="logo twitter"></a>
+            <a href="#"><img src="media/imatge/icones/figma_iconLinkedin.svg" alt="logo linkedin"></a>
+            <a href="#"><img src="media/imatge/icones/figma_iconInstagram.svg" alt="logo instagram"></a>
+    
+        </footer>
+    </div>
+</body>
+</html>

@@ -51,7 +51,7 @@ body{
     position:relative;
     width: 90%;
     /* pq es vegi per on va */
-    border:5px solid red;
+    /* border:5px solid red; */
     /* per centrar-lo al contenidor pare */
     margin: 0 auto;
 
@@ -97,12 +97,17 @@ body{
 main>section{
     /* aqeui definim com seran els contenidors section */
     position: relative;
+    /* li donem una mica de espai a sota per separa dels altres */
+    padding-bottom:5rem;
 }
 
 /* Section que inclou el titol de cada pagina */
 .titol{
     /* seccio que inclou el titol de CADA PAGINA */
     width: 5trm;
+    /* RESET pq no mogui el titol del centre!!! */
+    padding-bottom: 0px;
+
 }
 .titol>h1{
     /* canviem font i cosetes .... */
@@ -150,7 +155,7 @@ h2{
     /* text shadow generator: https://html-css-js.com/css/generator/text-shadow/ */ 
     /* text-shadow: h-shadow v-shadow blur-radius color-shadow */
     text-shadow: 3px 5px 2px #474747;
-    border: dotted 5px blue;
+    /*border: dotted 5px blue;*/
 }
 
 .flex-container{
@@ -252,9 +257,6 @@ h2{
         margin: 0 1rem;
 }
 
-
-
-
 /* *** PAGINA DE CV *** */
 /* SECTION CV_MAV */
 .cv_nav ul{
@@ -283,10 +285,45 @@ h2{
 }
 .cv_personal .flex-container img {height: 8rem;}
 
+/* SECT>ION CV_IDIOMES */
+.cv_idiomes table{
+    width: 50%;
+    /* pq no creix fin al infinit ... i mes enlla!!! */
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+.cv_idiomes table caption {color:blue; margin-bottom: 1rem;}
+.cv_idiomes table,.cv_idiomes th,.cv_idiomes td {
+    border: 1px solid green;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+}
+
+/* SECTION CV_ESTUDIS */
+.cv_estudis ul {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+.cv_estudis ul li {padding: 0.5rem 0rem;}
+.cv_estudis ul li>span{font-weight:bold;}
+
+/* SECTION CV_LABORAL */ 
+.cv_laboral ul {
+    width: 90%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem
+}
+.cv_laboral ul li {padding: 0.5rem 0rem;}
+.cv_laboral ul li>span:first-child{font-weight:bold;}
+.cv_laboral ul li>span:nth-child(2){font-style: italic;}
+
 /* *** PAGINA DE CONTACTE *** */
 /* sols tenim una cosa que controlar, el form */
-.contacteFormulari{}
-
 .contacteFormulari {
     /* li posem un ample maxim pq no creixi indefinidament .... */
     width: 75%;
@@ -294,29 +331,24 @@ h2{
     /* i el centrem .... */
     margin: 0 auto;
 }
-
 .contacteFormulari fieldset {
     /* desactivarem els borders visibles dels fieldsets .... */
     border:none;
 }
-
 .contacteFormulari label {
     /* posem els titols en negreta */
     font-weight: bold;
 }
-
 .contacteFormulari .ample {
     width: 100%;
     /* afegim una mica de separacio entre el albel de sobre i el de sota */
     margin-top:0.5rem;
     margin-bottom:1rem;
 }
-
 .contacteFormulari input:last-child{
     /* arreglem qeue stigui tot en una solia linia .... */
     width: 1rem;
 }
-
 .contacteFormulari button {
     /* ho centrem i ho posem bonic .... */
     display: block;
@@ -352,7 +384,9 @@ h2{
 /* ********************************************************** */ 
 /* ********************************************************** */
 
-/* Disseny petit (menys de 600px) */
+/* ********************************************************** */
+/*               Disseny petit (menys de 600px) */
+/* ********************************************************** */
 @media only screen and (max-width: 600px){
 
     /* DEFAULT CONFIGS */
@@ -413,6 +447,8 @@ h2{
     }
     .cv_personal .flex-container img{height: 8em;}
 
+    .cv_idiomes table{font-size: 0.75rem;}
+
     /* FOOTER */
     .siteFooter{
         /* vegem qeu podem canviar .... */
@@ -420,13 +456,9 @@ h2{
     }
 }
 
-
-
-
-
-
-
-/* Disseny entremig (mes de 600 i menys de 992) */
+/* ********************************************************** */
+/*       Disseny entremig (mes de 600 i menys de 992) */
+/* ********************************************************** */
 @media only screen and (min-width: 601px) and (max-width:992px){
     body{
         background-color:orchid;
@@ -435,10 +467,14 @@ h2{
     .mainContainer{
         width: 90%;
         margin: 0 auto;
+        font-size: 32px;
     }
 }
 
-/* Disseny gran (mes de 992) */
+
+/* ********************************************************** */
+/*                Disseny gran (mes de 992) */
+/* ********************************************************** */
 @media only screen and (min-width: 993px){
     body{
         background-color:yellow;
@@ -446,20 +482,24 @@ h2{
 
     .mainContainer{
         /* definim fins a on pot creixer */
-        max-width: 1440px;
+        max-width: 75%;
         /* el centrem a la pantalla */
         margin:0 auto;
     }
 
-/* Disseny gran (mes de 1440) */
+
+/* ********************************************************** */
+/*                 Disseny gran (mes de 1440) */
+/* ********************************************************** */
 @media only screen and (min-width: 1441px){
     body{
-        background-color:lightseagreen;
+        background-color:white;
     }
 
     .mainContainer{
         /* definim fins a on pot creixer */
-        max-width: 1440px;
+        width: 1440px;
         /* el centrem a la pantalla */
         margin:0 auto;
+        font-size: 20px;
     }

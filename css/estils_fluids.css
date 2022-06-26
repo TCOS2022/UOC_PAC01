@@ -463,12 +463,22 @@ h2{
 @media only screen and (min-width: 601px) and (max-width:992px){
     body{
         background-color:orchid;
+        font-size: 24px;
     }
 
     .mainContainer{
         width: 90%;
         margin: 0 auto;
-        font-size: 32px;
+        font-size: 24px;
+    }
+
+    /* PAGINA INDEX */
+    .flex-container{
+        flex-direction: column;
+    }
+
+    p{
+        text-align: justify;
     }
 }
 
@@ -489,6 +499,15 @@ h2{
         font-size:20px;
     }
 
+     /* PAGINA INDEX */
+     .flex-container{
+        flex-direction: column;
+    }
+
+    p{
+        text-align: justify;
+    }
+}
 
 /* ********************************************************** */
 /*                 Disseny gran (mes de 1440) */
@@ -505,3 +524,8 @@ h2{
         margin:0 auto;
         font-size: 16px;
     }
+     /* PAGINA INDEX */
+     .flex-container{
+        flex-direction: row;
+    }
+}

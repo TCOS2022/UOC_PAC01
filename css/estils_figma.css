@@ -1,0 +1,344 @@
+/* ARXIU CSS GENERAL PER TOTES LES FULLES */
+
+/* NOTES: hi han moltes linies de border desactivades que son per test */
+/* NOTES: Em fet servir ancles tant  de clases com de cascada */
+
+/* ************************************************************************** */
+/* CONFIGS BASIQUES */
+/* ************************************************************************** */
+/* RESET BASIC */
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* IMPORTACIO DE FONTS DE GOOGLE FONTS */
+/* NOTA: Ho podem posar al HTML com a link o be aqui ... aqui es mes curt */
+
+/* Google Font: Inter 400/600 */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
+
+/* Google Font: Montserrat 400/600 */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'); */
+
+
+
+/* ************************************************************************** */
+/* CONFIGS COMUNS */
+/* ************************************************************************** */
+
+/* VARIABLES CSS */
+:root {
+    /* Definim variables de colors */
+    --main-bg-color: #222222;
+    --main-fg-color: #F5F5F5;
+    /* Definim variables de fonts */
+    --titlePage: Montserrat;
+    --titleSection: Inter;
+    --mainFont: Inter;
+  }
+
+/* GENERIQUES EN TOTA LA WEB */
+html{
+    /* definim la font i estils "per defecte" i la base pels REM.. */
+    font-size: 16px;
+    font-family: var(--mainFont);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* tenim un div posat en paralel amb la plantilla original */
+.plantilla_figma{
+    height: 2884px;
+    float:right;
+    border: 5px blue solid;
+    margin:0px;
+    padding:0px;
+}
+
+
+.mainContainer{
+    width: 1440px; 
+    height: 2885px; 
+    border:solid red 5px;
+    /*background-color: blueviolet;*/
+}
+
+h2{
+    /* Aixo es el titol de totes les sections a dintre del main */
+    /* Intento definir una config comu a totes les sections que inclogui */
+    /* font-type, font-size, font-weight, margin s i aliniaicio centrada */
+
+    /* Afegim la font que volem i una de "respaldo" per si falla la primera */
+    font-family: var(--titleSection), arial;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    
+    text-align: center; 
+    padding: 4rem; 
+    margin-top:1rem; 
+}
+
+section{
+    width: 100%; 
+    margin:0;
+    padding:0;
+    background-color: #F5F5F5;
+}
+
+header, main, footer {width: 100%;}
+
+/* NAV */
+nav.siteNav {
+	/* Definim el color de fons, el alt i el ample */
+	width: 100%;
+	height: 0.75 rem;
+    /* segons esquema son 64px */
+    height: 64px;
+	background-color: var(--main-bg-color);
+	/* El posem com a flex-container, i definim les seves propietats */
+	/* aixi els items del flex son directament, els <a> */
+	display:flex;
+	/* justifiquem en alçada, que es la aliniacio en el 2 eix .... */
+	 align-items: center; 
+}
+
+nav.siteNav a {
+	/* Eliminem el subratllat i els posem de color quasi blanc */
+	color: var(--main-fg-color);
+	text-decoration:none;
+    padding: 0 0.5rem;
+    /*border: green 2px solid;*/
+}
+
+nav.siteNav a:first-child {
+	/* fem que el flex posi el maxim de espai a la dreta de aquest element */
+	margin-right: auto;
+    /* i el pintem del color gris que ens demanen tambe */
+    background-color:var(--main-bg-color);
+}
+
+nav.siteNav a:last-child {
+    /* com ens demanen que el ultim no tingui separacio amb el marge */
+    padding-right:0;
+    /* pero al figma si qeu tenim margin .... */
+    padding-right: 1rem;
+}
+
+nav.siteNav a img {
+	/* el definim com a block per poder controlar alt i ample; */
+    /* li posem el witdh donat al figma .... */
+    width: 40px;
+	/* li posem el color de fons i el de la icona */
+	color:var(--main-fg-color);
+}
+
+/* FOOTER */
+footer.siteFooter {
+    /* definim prietats del footer basiques: */
+    width: 100%;
+    background-color: var(--main-bg-color);
+    /* el definim com a flex container per organitzar els seus items */
+    display:flex;
+    /* jsutifiquem els eus items al mig ... */
+    justify-content: center;
+    /* Afegim per posar-ho com a figma */
+    gap: 48px;
+    height: 128px;
+    align-items: center;
+}
+    
+.siteFooter a {
+        /* aixo son el flex-items ..... */ 
+        /* de fet, no caldria pero li podem donar una mica de padding per separar-los */
+}
+    
+.siteFooter a img {
+    /* definim les mides de la imatge SVG ... */
+    /* segons figma son 36px ... */
+    height: 36px;
+    padding:0; margin:0;
+
+    /* li donem color de fons que es veura pq te transprencies */
+    /*background-color:var(--main-fg-color);*/
+}
+
+/* SECTION TITOL */
+section.titol{
+    position:relative;
+    /* resetegem paddings pq centri correctament*/
+    padding:0px;
+    margin-top:0px;
+}
+section.titol img{
+    position:relative;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+}
+
+section.titol h1{
+    /* area del titol de la pagina, nooo de la web */
+    /* definirem une aspectes extres de manera que el text quedi sempre destacat del fons */
+    color:var(--main-fg-color);
+    border-radius: 0 2rem 0 2rem;
+    /*border: green solid 5px;*/
+    background-color: green;
+    padding: 1rem 2rem;
+    text-align: center;
+
+    /* netegem els margins pq cuadri be */
+    margin:0px;
+    /* definim com a postion:absolute i el centrem, amb top, left i transform; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* la posem a SOBRE de la imatge amb z-index */
+    z-index: 1;
+    
+    /* i una mica de ombra */
+    /*text-shadow:1rem 1rem 2rem #000000;*/
+
+    /* alguns canvis per adaptar-nos al disseny figma: */
+    font-family: var(--titlePage);
+    font-size: 40px;
+    color: #FFFFFF;
+    
+}
+
+
+/* ************************************************************************** */
+/* CONFIHS ESPECIFIQUES */
+/* ************************************************************************** */
+/* PAGINA INDEX */
+/* SECTION PRESENTACIO */
+section.inici_presentacio>div {
+    /* aquest dov es el flex-container */
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    /*border:5px dotted blue;*/
+    position:relative;
+    padding: 0 48px;
+    gap:48px;
+}
+
+/* i aqui tenim els flex-items */
+section.inici_presentacio>div>div:first-child {
+    /*border: 2px solid green;*/
+    width: 845px;
+    /*background-color:yellow;*/
+}
+
+section.inici_presentacio>div>div:last-child {
+    border: 2px solid blue;
+    position:relative;
+    width: 400px;
+}
+
+section.inici_presentacio>div>div p {text-align: left}
+section.inici_presentacio img{width: 100%;}
+
+/* SECTION INICI_PROJECTES */
+section.inici_projectes{margin-bottom:75px;}
+
+section.inici_projectes>div{
+        /* aquest div es el flex-container */
+        width: 90%;
+        display:flex;
+        justify-content:center;
+        gap:48px;
+        /*border:5px dotted blue;*/
+        position:relative;
+        margin: 0 auto;
+}
+
+section.inici_projectes article {
+    /* aquest element es el flex-item */
+    border: solid 5px #777777;
+    width:340px;
+    /* segons figma son 6, pqeo pq es vegi semblant ha de ser molt mes */
+    border-radius: 6px;
+    border-radius:24px;
+    /* pq la imatge es quedi a dintre del radi curvat */
+    overflow: hidden;
+}
+
+section.inici_projectes article img {width:100%;height:200px}
+section.inici_projectes article p {padding: 26px; text-align: justify;}
+section.inici_projectes article button {
+    width:240px;
+    display:block;
+    padding:1rem auto; 
+    margin:1rem auto;
+    height:3rem;
+    color:#FFFFFF;
+    background-color: #222222;
+} 
+
+/* SECTION INICI_EXPERIENCIA */
+section.inici_experiencia{background-color: var(--main-bg-color);padding:2rem}
+section.inici_experiencia h2{color:var(--main-fg-color)}
+section.inici_experiencia>div{
+    /* aquest div es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:space-around;
+    gap:2.5%;
+    /*border:5px dotted blue;*/
+    position:relative;
+    margin: 1rem auto;
+}
+
+section.inici_experiencia img{height: 350px;}
+
+
+/* SECTION INICI_AFICIONS */
+section.inici_aficions{
+    /* li afegim un paffing per omplir la aprt de abaix */
+    padding-bottom: 75px;
+}
+section.inici_aficions>div{
+    /* aquest dov es el flex-container */
+    width: 90%;
+    display:flex;
+    justify-content:center;
+    /*border:5px dotted blue;*/
+    position:relative;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+section.inici_aficions div.flex-item{
+    width: 340px;
+    /*border: dotted green 2px;*/
+    padding: 24px;
+    text-align: center;
+
+    /* i el mateix item es un contenidor flex ... */
+    /* i per aliniar la icona i el text .... */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #d2d2d2;
+    margin:24px;
+}
+
+/* aquest dos son els flex-items interiors .... */
+section.inici_aficions div.flex-item span{
+    font-family: var(--titlePage);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px;
+    color:blue;
+}
+section.inici_aficions div.flex-item img{
+    height: 40px; 
+}
+
+/* PAGINA CV */
+/* PAGINA CONTACTE */

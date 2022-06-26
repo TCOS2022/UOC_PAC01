@@ -1,0 +1,105 @@
+Ok ok .... al estrucutyra es la mateixa que al de cv.html, titol i sections, per tant podrem aprofitar la estrucutyra
+que em desenvolopat del layout i les classes comuns del CSS3
+
+    <div class="mainContainer">
+            
+        <header>
+            <!-- aqui posem el codi que tenim del HEADER/NAV -->
+        </header>
+
+        <main>
+            <section class="titol"></section>
+            <section class="inici_presentacio"></section>
+            <section class="inici_pojectes"></section>
+            <section class="inici_experiencia"></section>
+            <section class="inici_aficions"></section>
+        </main>
+
+        <footer>
+            <!-- aqui posem el codi que tenim del FOOTER -->
+        </footer>
+
+    </div>
+
+la section de titol no te cap msiteri, es igual a la de cv o contactes ..... el css es el mateix i es comu a totes les pagines, per aixo la clase es diu "titol" i no "inici_titol"
+
+SECTION INICI_PRESENTACIO 
+Es la mateixa estructura que en el cas de cv, una area amb text i una imatge a la seva dreta, podem fer servir
+una distribucui de dos flex-items i ja esta.
+
+    <section class="inici_presentacio">
+
+        <h2>Hola!</h2>
+
+        <div>
+
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur labore quibusdam neque expedita similique ad a temporibus unde facere fugit dicta adipisci repudiandae ratione excepturi rem eius praesentium, ipsa voluptate facilis doloribus reprehenderit. Saepe explicabo, laborum cumque enim quasi suscipit, sapiente vero consequatur dolores quibusdam quam laudantium, delectus hic fuga necessitatibus aspernatur voluptates repudiandae ex maxime odio. Illum aspernatur itaque, natus sunt rerum nemo debitis, maxime exercitationem, illo architecto error inventore voluptas commodi libero esse modi fugit ipsa corporis numquam? Cupiditate, modi. Assumenda, totam illum vitae eius hic nobis reiciendis dolorem inventore similique recusandae, porro quae sit excepturi cupiditate?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, architecto.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ab consectetur deserunt earum soluta minus corporis consequatur quos aperiam, architecto doloremque deleniti nisi! Sed, aliquam!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corporis veniam numquam accusantium possimus esse.</p>
+
+            </div>
+
+            <img src="https://picsum.photos/2000/1000" alt="Imatge de la presentacio">
+
+        </div> 
+
+    </section>
+
+    val, el codi css pot canviar lleujerament pero en essencia es el mateix, definim un flex-container i dintre 
+    tenim dos flex-items, un amb el text i l altre amb la imatge ....
+
+    /* SECTION INICI_PROJECTES */
+    section.inici_projectes>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        /*justify-content:space-around;*/
+        gap:2.5%;
+        border:5px dotted blue;
+        position:relative;
+        margin: 1rem auto;
+    }
+
+    section.inici_projectes article {outline: auto;}
+
+    section.inici_projectes article img {width: 100%;}
+    section.inici_projectes article p {padding: 1rem; text-align: justify;}
+    section.inici_projectes article button {display:block;padding: 2rem auto; margin:1rem auto;} 
+
+
+    SECTION EXPERIENCIA 
+    Vale, aqui l unic que cal destacar es que el color de fons canvia, la resta igual es un flexbox
+    amb 3 items .....
+
+    <section class="inici_experiencia">
+        <h2>Experiencia</h2>
+        <div>
+            <img src="media/imatge/continguts/index/grafic_html5.png" alt="grafic percentual HTML5">
+            <img src="media/imatge/continguts/index/grafic_css3.png"  alt="grafic percentual CSS3">
+            <img src="media/imatge/continguts/index/grafic_js.png"    alt="grafic percentual JS">
+        </div>
+    </section>
+
+    codi Css3/* SECTION INICI_EXPERIENCIA */
+    section.inici_experiencia{background-color: black;padding:2rem}
+    section.inici_experiencia h2{color:white}
+    section.inici_experiencia>div{
+        /* aquest dov es el flex-container */
+        width: 90%;
+        display:flex;
+        justify-content:space-around;
+        gap:2.5%;
+        border:5px dotted blue;
+        position:relative;
+        margin: 1rem auto;
+    }
+
+section.inici_experiencia img{width: 15%;}
+
+
+SECTION AFICIONS 
+Aqui farem alguns canvis, atacarem el grup de divs via un nom de clase ....
+Posarem un joc de cards i li demanarem al flex que ocupi 2 files .....
+

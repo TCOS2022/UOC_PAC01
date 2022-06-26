@@ -1,0 +1,306 @@
+Val, fem servir el layout qeu em dissenyat amb contenidor, header/main/footer ....
+
+Tenim les seguents seccions
+
+    titol
+
+    menu de navegacio secundari
+
+    pesonal
+
+    idiomes
+
+    estudis
+
+    laboral
+
+En aquest cas podem veure que tenim les seccions PARS de color de fons gris.
+
+***** CODI HTML *****
+    <main>
+        <section class="titol">
+            <h1>Curriculum Vitae</h1>
+            <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
+        </section>
+        <section class="cv_nav"></section>
+        <section class="cv_personal"></section>
+        <section class="cv_idiomes"></section>
+        <section class="cv_estudis"></section>
+        <section class="cv_laboral"></section>
+    </main>
+
+NOTA: la part del titol es generica per totes les pagines, per tant no la personalitzem amb el nom
+de la pagina com les altres ....
+
+SECTION INDEX
+Val, per aqeusta seccio, com es una area de navegacio, la fiquem en tags NAV, 
+podriem simpliifcar codi eliminant etiquetes pero mantindrem la estructura pq sigui coherent en tota la web.
+Com ho em configurat com a llista, ens toca arreglar diferents cosetes com la bola
+que marca cada li ....
+
+    <section class="cv_nav">
+        <h2>Index</h2>
+        <nav>
+            <ul>
+                <li>
+                    <img src="" alt="icona dades personals">
+                    <a href="#cv_personal">Dades personals</a>
+                </li>
+                <li>
+                    <img src="" alt="icona idiomes">
+                    <a href="#cv_idiomes">Idiomes</a>
+                    </li>
+                <li>
+                    <img src="" alt="icona estudis">
+                    <a href="#cv_estudis">Estudis</a>
+                </li>
+                <li>
+                    <img src="" alt="icona laboral">
+                    <a href="#cv_laboral">Laboral</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+Nota: aprofitem i ja apuntem les ancles per anar saltant despres .....
+
+    /* SECTION NAV */
+    section.cv_nav ul {
+        /* eliminem les boletes */
+        list-style-type: none;
+        /* la configurem coma flex i posem les coses br */
+        display:flex;
+        justify-content: center;
+        /* el sepraem una mica del h2 ... */
+        margin-top:1.5rem;
+    }
+
+    section.cv_nav li{
+        /* ho configurem com a flex per centrar la imtge i el text */
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.75rem;
+    }
+
+    section.cv_nav ul li img{height: 1rem; margin-right: 0.25rem}
+
+
+SECTION INFORMACIO PERSONAL 
+    <section class="cv_personal">
+
+        <h2>Dades personals</h2><br>
+
+        <div>
+            <div>
+                <p><span>Nom:</span>   Tete Cohete</p>
+                <p><span>Adreça:</span>   Rue del Percebe 13</p>
+                <p><span>DNI:</span>  00 000 000 X</p>
+                <p><span>Telefon:</span>   666 666 666</p>
+                <p><span>Email:</span>  notinc@encaplloc.kk</p>
+            </div>
+
+            <img src="media/imatge/icones/smile.svg" alt="perfil">
+
+        </div>
+    </section>
+
+NOTES: val, aqui com la idea de origen es fer servir flex, elq eu farem sera organitzar ja
+les dades pensant en el flex-container i els flex-items, per tant posem el h2 ell sol ...
+
+i ara preparem una seccio per flexifizar .... com volem 2 elements, ens cal juntar les linies de text 
+en un sol flex-item, i la imatge en un altre, per fer-ho be, estari potser mes correcte
+posant tambe la img en un div .... pero no es imprescindible.
+
+per posar el text en negreta apliqeum un tag span a les linies <p> ....  podem tambe asignar-li
+una clase per atacarla amb css ... o be fem servir selectors especifitats, dos exemples, 
+mes generals (amb espais, indiquen qeu son a qualsevol nivell) i mes especifics (amb ">") fent
+referencia a quin nivell de indexat ens dirigim
+
+Ah!, fem servir "gap" per separar les columnes/items del flex. Funciona millor que aplicar
+un width/padding/margin pq el GAP sols aplica ENTRE items, no s aplica als item dels extrems.
+
+    section.cv_personal div p span {font-weight: bold;}
+
+    section.cv_personal>div {
+        /* el definim com a flex container per poder ordenar els 2 elements */
+        display:flex;
+        gap:5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.cv_personal div img {height: 10rem;}
+
+fianlement, per fer la cara mes grossa, sols cal aplicarli un height mes gran ....
+
+
+SECTION IDIOMES 
+Igual que en les sections anteriors, tenim un h2 de titol i una taula .....
+
+Les taules tenen un titol (caption) head i foot per posar cosetes i finalment el body
+on estan les dades.
+Les taules etas organitzades en file (tr) i a dintre lis definim les columnes (th i td)
+
+Podem agrupar files i columnes amb colspan i rowspan
+
+tambe podem "agrupar" els borders de cel-les adjacent amb: border-collapse: collapse;
+
+    <table>
+
+        <caption>-- Aixo es la llegenda  -- </caption>
+
+        <thead>
+            <tr>
+                <th>Llengues</th>
+                <th colspan="4">Nivells</th> 
+            </tr>
+            <tr>
+                <th>***</th>
+                <th>Baix</th>
+                <th>Mitja</th>
+                <th>Alt</th>
+                <th>Natiu</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr> 
+                 <td>Catala</td>   <td></td>  <td></td>  <td></td>  <td>*</td> 
+            </tr>
+            <tr> <td>Castella</td> <td></td>  <td></td>  <td></td>  <td>*</td> </tr>
+            <tr> <td>Angles  </td> <td></td>  <td>*</td> <td></td>  <td></td>  </tr>
+            <tr> <td>Frances </td> <td></td>  <td></td>  <td>*</td> <td></td>  </tr>
+            <tr> <td>Klingon </td> <td>*</td> <td></td>  <td></td>  <td></td>  </tr>
+        </tbody>
+
+        <tfoot>
+            <tr> <td colspan="5">-- Aixo el el peu de la taula --</td> </tr>
+        </tfoot>
+    </table>
+
+Nota: com a exemple, posem la linia del head en 2 linies i afegim el caption i el peu
+
+i el codi CSS3:
+    /* SECTION IDIOMES */
+    table{
+        width: 50%;
+        /* pq no creixi fin al infinit ... i mes enlla!!! */
+        max-width: 25rem;
+        /* per centrar la taula.... */
+        margin: 0 auto;
+        margin-top: 2rem
+    }
+
+    table caption {color:blue; margin-bottom: 1rem;}
+    table,th,td {
+        border: 1px solid green;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 0.5rem 1.5rem;
+    }
+
+
+SECTION INFORMACIO ACADEMICA
+Val, la estructura que ja coneixem, un h2 ... i un contingut, en aquest cas sera una llista que arreglarem despres al css
+
+    <section class="cv_estudis">
+
+        <h2>Informacio academica</h2>
+
+        <ul>
+            <li>
+                <span>Estudis 1</span> <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span>Estudis 2</span> <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem ad obcaecati!
+            </li>
+            <li>
+                <span>Estudis 3</span> <br>
+                Lorem ipsum dolor sit amet.
+            </li>
+            <li>
+                <span>Estudis 4</span> <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos perferendis et natus aliquam, dolorem id quia nesciunt.
+            </li>
+        </ul>
+    </section>
+
+NOTES: valeeee .... es una llisat amb un titol amb negreta, que marcarem amb un span ... i li afegim un <br>
+que inclues es podria fer amb un ::after al css.....
+
+Al CSS el que farem sera, reposicionarlo la llista pq les boletes qeudin a dintre i no massa a la esquerra, posar
+el span a bold .... i afegir si volem una mica de espai pq respiri ... i llestos.
+
+
+SECTION INFORMACIO Laboral
+Calcada a la anterior, sols caldra ajustar una miqueta els spans ... ja que aqui en tenim 2 diferents
+
+    <section class="cv_laboral">
+
+        <h2>Informacio laboral</h2>
+
+        <ul>
+            <li>
+                <span class="negreta">Estudis 1</span> 
+                <span class="italica"> (lloc,periode) </span>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 2</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 3</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+            <li>
+                <span class="negreta">Estudis 4</span> <span class="italica">(lloc, periode) </span><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius.
+            </li>
+        </ul>
+    </section>
+
+NOTES: Per atacar els spans, podem posar-lis una clase a cadascun, o aplicar selectors
+    AMB SELECTORS:
+
+    section.cv_laboral ul li>span:first-child{font-weight:bold;}
+    section.cv_laboral ul li>span:last-child{font-style: italic;}
+    AMB CLASSES:
+
+    .cv_laboral span.negreta {font-weight:bold;}
+    .cv_laboral span.italica {font-style: italic;}
+
+I al final ho fem aixi:
+    /* SECTION LABORAL */ 
+    section.cv_laboral ul {
+        width: 90%;
+        max-width: 40rem;
+        margin: 0 auto;
+        margin-top: 2rem
+    }
+
+    section.cv_laboral ul li {padding: 0.5rem 0rem;}
+    section.cv_laboral ul li>span:first-child{font-weight:bold;}
+    section.cv_laboral ul li>span:nth-child(2){font-style: italic;}
+
+NOTA: no se pq pero amb last-child no em funcionava, aixi qeu he fet servir nth-child.
+
+
+
+Com a ultim canvi que cal fer, esta la asignacio del nav secondari, recordem que ens cal una ancla en forma de IDIOMES
+per tal qeu el tag <a> salti fins alla, afegirem doncs a cada section un id pq pugui anar-hi
+
+    <section class="cv_personal" id="cv_dp">
+    <section class="cv_personal" id="cv_idiomes">
+    <section class="cv_personal" id="cv_estudis">
+    <section class="cv_personal" id="cv_laboral">
+
+NOTA: SI volem que s´obri en una altre apgina, afegirem target="_blank" al <a>
+
+    <a href="home.html" target="_blank"> HOME! </a> obrira una finestra nova cada cop que fem click
+
+

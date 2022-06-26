@@ -1,0 +1,20 @@
+footer.siteFooter {
+/* definim prietats del footer basiques: */
+width: 100%;
+background-color: black;
+/* el definim com a flex container per organitzar els seus items */
+display:flex;
+/* jsutifiquem els eus items al mig ... */
+justify-content: center;
+}
+
+.siteFooter a {
+    /* de fet, no caldria pero li podem donar una mica de padding per separar-los */
+}
+
+.siteFooter a img {
+    /* definim les mides de la imatge SVG ... */
+    height: 2rem; 
+    /* li donem color de fons que es veura pq te transprencies */
+    background-color:white;
+}

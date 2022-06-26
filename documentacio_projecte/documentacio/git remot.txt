@@ -1,0 +1,24 @@
+PUSH -> "EMPENYER"  = ENVIAR
+
+PULL -> " ESTIRAR " = REBRE
+
+Comndaments basics:
+
+	git push, git pull
+
+Configurar remot
+
+
+Per gestionar TOTES les branches de una tacada
+
+	git push --all nom_del_remot
+
+
+Enviar al remot (la branca activa):
+
+	git push nom_del_remot
+
+
+Rebre del remot:
+
+	git pull nom_del_remot

@@ -42,6 +42,7 @@ body{background-color: darkgrey;}
     background-color: black;
 }
 .mainContainer>nav::after{
+    /* per jugar amb cosetes, fem servir el after per tancar el float */
     content:"";
     clear: both;
 }

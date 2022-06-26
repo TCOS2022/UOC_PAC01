@@ -1,0 +1,225 @@
+/*
+************************************************
+*** ARXIU CSS PER FER EL LAYOUT SENSE FLOATS ***
+************************************************
+*/
+
+
+
+/* ************************************ 
+   **** CSS GENERICS A TOTA LA WEB ****
+   ************************************ */
+
+/* ***** FIXING FONTS ***** */
+/* Definim font base per gestionar-ho tot amb em/rem */
+/* Per defecte es de 16px, pero ho podriem canviar ... */
+html {font-size: 16px;}
+
+/* ***** RESET BASIC CSS ***** */
+/* Eliminem margins i paddings i definim el model de caixa a "border-box" */
+* {
+    margin:0px; 
+    padding:0px;
+    box-sizing: border-box;
+}
+
+ul {list-style-type: none;}
+
+
+/* ***** VARIABLES DE CSS ***** */
+
+/* ***** AREES COMUNS DEL DISSENY ***** */
+
+/* BODY */
+body {background-color: yellow;}
+
+/* mainContainer */
+.mainContainer {
+   width: 80%;
+   margin:0 auto;
+   background-color: white;
+}
+
+/* NAV */
+/* com que podem tenir molts ul anidats en diferent llocs, es important que definim a quin volem atacar,
+ho podem fer asignant-lis un id o una clase especifica, o be amb selectors en cascada. En aquest cas
+ho farem amb selectors amb cascada */
+
+.mainContainer>nav {background-color: black;}
+
+.mainContainer>nav ul.list_outer {
+   list-style-type: none;
+   display: flex;
+   flex-direction: row; /* Direccio en qeu aniran els items ... */
+   flex-wrap: nowrap; /* tots els item en 1 sola fila */
+   justify-content: space-between; /* repartim el espai del conteniodr ENTRE els items */
+   align-items: center;
+}
+
+.mainContainer>nav>ul.list_outer>li:first-child {
+   width: 100px;
+   background-color: lightslategray;
+   text-align: center;
+}
+.mainContainer>nav ul.list_outer>li>a>img{
+   color:white; 
+   height:1rem; 
+}
+
+.mainContainer>nav ul.list_inner{
+   list-style-type: none;
+   display: flex;
+   flex-direction: row; /* Direccio en qeu aniran els items ... */
+   flex-wrap: nowrap; /* tots els item en 1 sola fila */
+   justify-content: flex-end; /* repartim el espai del conteniodr ENTRE els items */
+}
+
+.mainContainer>nav ul.list_inner li {
+   margin: 0 0.5rem; /* fem servir rems pq son mes fluids */
+}
+.mainContainer>nav ul.list_inner li a {color:white}
+/* Aprofitant un peudoselector canviem el margin del LAST CHILD */
+.mainContainer>nav ul li:last-child{ margin-right: 1rem;}
+
+
+/* HEADER */
+/* val, farem servir posicions absolutes i relatives per sobreposar el h1 */
+.mainContainer>header{position:relative}
+.mainContainer>header h1{
+   margin:0px; padding:0px;
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%); 
+   /* ajustem el font-type, size i weight */
+   font-size: 3rem;
+   font-weight: bold;
+   padding: 1rem 2rem;
+   color:white;
+   background-color: green;
+   border-radius: 0 2rem 0 2rem;
+}
+
+.mainContainer>header>img{
+   width: 100%;
+}
+
+
+/* MAIN */
+/* com a "main" sols en podem tenir 1, llaovrs el podem fer servir de ancla/ selector principal */
+main{
+   position:relative;
+   width: 100%;
+   /* border: 2px solid red */
+}
+
+main h2{text-align: center; width: 100%;}
+
+
+/* FOOTER */
+/* com poden haver mes footers, el seleccionem especificament */
+/* ho posem "mono" amb flex ..... */
+.mainContainer>footer {
+   background-color: black;
+   padding: 0.5rem;
+}
+
+.mainContainer>footer div{
+   display:flex;
+   justify-content: center;
+}
+
+.mainContainer>footer div img{
+   width: 2rem;
+   background-color:white;
+   margin-left:1rem;
+   margin-right: 1rem;;
+}
+
+
+
+/* **************************************************
+   **** ESPECIFICACIONS PER PAGINES DETERMINADES ****
+   ************************************************** */
+
+/* INICI */
+/* agruparem els dos elements en un div per poder fer servir flex, ja que el h2 esta al amteix nivell */
+section#presentacio>div{
+   display:flex;
+   position: relative;
+}
+
+section p{padding: 0.5rem; margin:0.5rem}
+
+section#projectes>div{
+   display:flex;
+   justify-content: space-evenly;
+}
+
+section#projectes article {
+   margin:1rem;
+}
+
+section#projectes article button{display:block; margin: 0 auto;}
+
+section#experiencia{background-color: black;}
+
+section#experiencia h2 {color:white}
+section#experiencia>div{
+   padding:1rem;
+   display:flex;
+   justify-content: space-evenly;
+}
+
+/* section#aficions{}*/
+section#aficions div.flex-container{
+   display:flex;
+   justify-content: space-around;
+}
+
+section#aficions div.flex-item{
+   border: darkgray 2px solid;
+   border-radius: 20px;
+   padding:1rem 2rem;
+}
+
+section#aficions div.flex-item img{
+   height:1.5rem;
+   border: 1px solid red;
+   vertical-align: bottom;
+   background-color: red;
+}
+
+/* CV */
+
+/* CONTACTE */
+main form{
+   width: 75%;
+   margin: 0 auto;
+   /* border: 2px dotted green; */
+}
+main form fieldset{
+   /* border: 4px dotted orange */
+   border: none
+}
+
+main form label{font-weight: bolder;}
+
+main form .input1{
+   width: 100%;
+   /* border: 2px solid blue; */
+   text-align: left;
+}
+
+main form .button1{ 
+   display:flex;
+   justify-content: center;
+}
+
+main form button {
+   display:inline-block;
+   padding: 10px;
+   border: 2px black solid;
+   border-radius: 5px;
+   margin: 0 2rem;
+}

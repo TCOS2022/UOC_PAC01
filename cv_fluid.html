@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de CV</title>
-    
+
     <!-- Afegim arxius CSS, normalize.css per unificar criteris de estils -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- afegim arxius CSS, local a la web -->
@@ -16,13 +17,14 @@
     <!-- Tambe podria estar al CSS posat amb @import ....  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <div class="mainContainer">
-        
+
         <header>
             <!-- aqui posem el codi que tenim del HEADER/NAV -->
             <nav class="siteNav">
@@ -39,7 +41,7 @@
                 <h1>Curriculum Vitae</h1>
 
                 <img src="https://picsum.photos/2000/1000" alt="Imatge de fons per el titol principal">
-            
+
             </section>
 
             <section class="cv_nav">
@@ -74,11 +76,11 @@
 
                 <div class="flex-container">
                     <div>
-                        <p><span>Nom:</span>   Tete Cohete</p>
-                        <p><span>Adreça:</span>   Rue del Percebe 13</p>
-                        <p><span>DNI:</span>  00 000 000 X</p>
-                        <p><span>Telefon:</span>   666 666 666</p>
-                        <p><span>Email:</span>  notinc@encaplloc.kk</p>
+                        <p><span>Nom:</span> Tete Cohete</p>
+                        <p><span>Adreça:</span> Rue del Percebe 13</p>
+                        <p><span>DNI:</span> 00 000 000 X</p>
+                        <p><span>Telefon:</span> 666 666 666</p>
+                        <p><span>Email:</span> notinc@encaplloc.kk</p>
                     </div>
                     <img src="media/imatge/icones/smile.svg" alt="perfil">
                 </div>
@@ -87,45 +89,70 @@
             <section class="cv_idiomes" id="cv_idiomes">
 
                 <h2>Idiomes</h2>
-
-                <table>
-                    <caption>-- Aixo es la llegenda  -- </caption>
-                    <thead>
-                        <tr>
-                            <th>Llengues</th>
-                            <th colspan="4">Nivells</th> 
-                        </tr>
-                        <tr>
-                            <th>***</th>
-                            <th>Baix</th>
-                            <th>Mitja</th>
-                            <th>Alt</th>
-                            <th>Natiu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Catala</td> <td></td> <td></td> <td></td> <td>*</td>
-                        </tr>
-                        <tr>
-                            <td>Castella</td> <td></td> <td></td> <td></td> <td>*</td>
-                        </tr>
-                        <tr>
-                            <td>Angles</td> <td></td> <td>*</td> <td></td> <td></td>
-                        </tr>
-                        <tr>
-                            <td>Frances</td> <td></td> <td></td> <td>*</td> <td></td>
-                        </tr>
-                        <tr>
-                            <td>Klingon</td> <td>*</td> <td></td> <td></td> <td></td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="5">-- Aixo es el peu de la taula --</td> 
-                        </tr>
-                    </tfoot>
-                </table>
+                <!-- como habrás visto, esta tabla en formato movil te esta petando el diseño
+                    un truco para que la tabla se vea mejor en dispositivos pequeños sin perder su tamaño
+                    es envolverlo en un capa (div) que tenga overflo-x: scroll, asi solo la tabla tendra scroll a la derecha.
+                    asegurate que la tabla tiene un width, sino no funcionará. -->
+                <div class="cv_idiomes__taula-box">
+                    <table>
+                        <caption>-- Aixo es la llegenda -- </caption>
+                        <thead>
+                            <tr>
+                                <th>Llengues</th>
+                                <th colspan="4">Nivells</th>
+                            </tr>
+                            <tr>
+                                <th>***</th>
+                                <th>Baix</th>
+                                <th>Mitja</th>
+                                <th>Alt</th>
+                                <th>Natiu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Catala</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>*</td>
+                            </tr>
+                            <tr>
+                                <td>Castella</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>*</td>
+                            </tr>
+                            <tr>
+                                <td>Angles</td>
+                                <td></td>
+                                <td>*</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Frances</td>
+                                <td></td>
+                                <td></td>
+                                <td>*</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Klingon</td>
+                                <td>*</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">-- Aixo es el peu de la taula --</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </section>
 
             <section class="cv_estudis" id="cv_estudis">
@@ -147,11 +174,12 @@
                     </li>
                     <li>
                         <span>Estudis 4</span> <br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos perferendis et natus aliquam, dolorem id quia nesciunt.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptas at dignissimos
+                        perferendis et natus aliquam, dolorem id quia nesciunt.
                     </li>
                 </ul>
             </section>
-            
+
             <section class="cv_laboral" id="cv_laboral">
 
                 <h2>Informacio laboral</h2>
@@ -163,7 +191,10 @@
                     </li>
                     <li>
                         <span>Estudis 2</span> <span>(lloc, periode) </span><br>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis distinctio sit eveniet repellendus, quos numquam eligendi soluta praesentium repellat nulla a odio animi veritatis quam doloribus earum? Nulla fugiat excepturi dolore assumenda aliquam nisi ut aut minima sequi. Quam neque aspernatur minima ratione eaque tempore excepturi fugiat voluptas sed aut.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis distinctio sit eveniet
+                        repellendus, quos numquam eligendi soluta praesentium repellat nulla a odio animi veritatis quam
+                        doloribus earum? Nulla fugiat excepturi dolore assumenda aliquam nisi ut aut minima sequi. Quam
+                        neque aspernatur minima ratione eaque tempore excepturi fugiat voluptas sed aut.
                     </li>
                     <li>
                         <span>Estudis 3</span> <span>(lloc, periode) </span><br>
@@ -171,7 +202,9 @@
                     </li>
                     <li>
                         <span>Estudis 4</span> <span>(lloc, periode) </span><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus delectus distinctio nesciunt iste quidem amet vero suscipit? Quidem illo illum exercitationem quis id sed?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus delectus
+                        distinctio nesciunt iste quidem amet vero suscipit? Quidem illo illum exercitationem quis id
+                        sed?
                     </li>
                 </ul>
             </section>
@@ -183,8 +216,9 @@
             <a href="#"><img src="media/imatge/icones/figma_iconTwitter.svg" alt="logo twitter"></a>
             <a href="#"><img src="media/imatge/icones/figma_iconLinkedin.svg" alt="logo linkedin"></a>
             <a href="#"><img src="media/imatge/icones/figma_iconInstagram.svg" alt="logo instagram"></a>
-    
+
         </footer>
     </div>
 </body>
+
 </html>
